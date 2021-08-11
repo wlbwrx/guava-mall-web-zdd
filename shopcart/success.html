@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	
+	<meta property="og:type"          content="website" />
+	<meta property="og:title"         content="【折多多】下單成功-購物，從折多多開始" />
+	<meta property="og:description"   content="折多多，您的專屬居家囤貨生活館。主營：居家生活、傢裝傢飾、3C小電、美容保養、戶外休閑。全站免運費 / 支持貨到付款 / 官方自營 / 100%正品保障 / 7天無憂退換貨。" />
+	<meta property="og:image"         content="https://d3o2c7bn83e5x8.cloudfront.net/image/shareIcon-zdd.jpg" />
+	<meta id='ogUrl' property="og:url" content="https://www.zdd.com.tw/">
+	<title>折多多</title>
+	<meta name="description" content="折多多，您的專屬居家囤貨生活館。主營：居家生活、傢裝傢飾、3C小電、美容保養、戶外休閑。全站免運費 / 支持貨到付款 / 官方自營 / 100%正品保障 / 7天無憂退換貨。">
+
+	<!-- 安卓平台 chrome -->
+	<meta name="mobile-web-app-capable" content="yes">
+	<link rel="icon" sizes="192x192" href="https://d3o2c7bn83e5x8.cloudfront.net/image/shareIcon-mini-zdd.jpg">
+	<!-- ios平台 safari -->
+	<!-- <meta name="apple-mobile-web-app-capable" content="yes"> -->
+	<!-- <meta name="apple-mobile-web-app-status-bar-style" content="black"> -->
+	<link rel="apple-touch-icon-precomposed" href="https://d3o2c7bn83e5x8.cloudfront.net/image/shareIcon-zdd.jpg">
+
+	<!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> -->
+
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="Expires" CONTENT="0">
+	<meta http-equiv="Cache-Control" CONTENT="no-cache">
+	<meta http-equiv="Pragma" CONTENT="no-cache">
+    <meta name="customerService">
+    <link rel="stylesheet" href="https://d3o2c7bn83e5x8.cloudfront.net/dist/mdui/css/mdui.css">
+	<link rel="stylesheet" href="https://d3o2c7bn83e5x8.cloudfront.net/dist/Swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="../css/common.css?v=20210125">
+    <style>
+        body{background:#F4F4F4;height: auto;min-height: 100%;}
+		ul,li{
+			list-style: none;margin:0;padding:0;
+		}
+        .mdui-order{background: #fff; padding: 24px 0px 12px 0px;height: 120px;box-sizing: border-box;}
+		.mdui-order img.success{width: 50px; height: 50px;}
+		.mdui-order-2{background: #FFFCEE;height: 220px;padding: 44px 0px 28px 0px;}
+
+		.mdui-detail{padding: 4%;background: #FFFCEE;}
+		.mdui-detail .detail{margin-top: 22px;}
+		.mdui-detail .detail:first-child{margin-top: 0}
+		.mdui-detail .mdui-ordersn {margin-top: 5px}
+		.mdui-detail .mdui-ordersn span{font-size: 14px;color: #363636;line-height: 14px;}
+		.mdui-detail .mdui-ordersn .mdui-btn-copy{color: #9F8A60;min-width: initial;width:40px; text-align:center;padding: 0px; height:22px;border:1px solid #9F8A60;border-radius:2px;line-height:22px; font-size: 12px; margin-left: 5px;}
+		.mdui-detail .mdui-ordersn + span{display: block;margin-top: 6px;font-size: 12px;color: #979797;line-height: 12px;}
+		.mdui-detail .picList{overflow-x: auto;margin-top: 16px}
+		.mdui-detail .picList::-webkit-scrollbar {display:none}
+
+		.mdui-detail .picList .picBox{display: flex;}
+		.mdui-detail .picList img{height: 70px;height: 70px;margin-right: 10px;}
+		.mdui-detail .picList img:last-child{margin-right: 0}
+
+        .mdui-order-tip{background: #fff;color: #7B7B7B;padding: 18px 0 22px 0;font-size: 12px}
+        .mdui-order-tip .mdui-order-tip-text{color: #CE2424; margin: 0px 4px;}
+		.mdui-order-2 + .mdui-order-tip{margin-top: 126px;font-size: 14px}		
+
+		.mdui-toolbar{display:flex;color:#7B7B7B;justify-content:space-between;align-items:flex-end;padding:0 8px;background:#FFF;box-shadow:0 1px 1px 0 rgba(237,237,237,1);height: 40px!important;line-height: 40px!important}
+		.mdui-toolbar .right,
+		.mdui-toolbar .left{display: flex;height: 100%;align-items: end;}
+		.mdui-toolbar .text-icon-options{position:relative;height:30px;width:36px;display:inline-block;margin-top: 2px;margin-left:0}
+		.mdui-toolbar .text-icon-options>img{width:20px;height:auto;margin-left:-10px;position:absolute;left:50%;top:2px}
+		.mdui-toolbar img{width:17px;}
+		.mdui-toolbar .mdui-btn-icon{border-radius:0;font-size:12px}
+		.mdui-toolbar a>span{width: 100%;text-align:center;margin:0 auto;display:block;font-size:10px;line-height:12px;color:#363636;position:absolute;bottom:-4px}
+		.mdui-toolbar .mdui-logo{margin: 0 auto;display: flex;height: 100%;align-items:center;justify-content: center}
+		.mdui-toolbar .mdui-logo img {width: auto;height: 19px;border-radius: 0!important;}
+		
+		.mdui-card-aggregation{border-radius: 0px;box-shadow: none;}
+    	.mdui-card-aggregation .mdui-card-product-content > a{text-decoration: none;display: inline-block}
+    	.mdui-card-aggregation > .mdui-card-content{padding:0px; }
+		.mdui-card-aggregation .mdui-card-media{padding-bottom: 100%;}
+		.mdui-card-aggregation .mdui-card-media img{position: absolute; width: 100%; height: 100%; top: 0; left: 0; border-radius: 0px !important;}
+		.mdui-card-aggregation .mdui-card-product-content{-webkit-overflow-scrolling: touch;box-sizing: border-box;padding: 12px 4% 6px; white-space: nowrap; overflow-x: auto;}
+		.mdui-card-aggregation .mdui-card-product-content .mdui-card-product{width: 120px; margin-right: 10px; box-shadow: none;}
+		.mdui-card-aggregation .mdui-card-product-content .mdui-card-product-content{padding: 8px 4px 0}
+    	.mdui-card-aggregation .mdui-card-header{height: initial; padding: 12px 4%; border-bottom: 1px solid #EDEDED;}
+		.mdui-card-aggregation .mdui-card-header .mdui-card-header-title{margin-left: initial;opacity: 1; color: #363636;}
+		.mdui-card-product-content{padding: 5px; color: #363636;}
+		.mdui-card-product-content .mdui-card-product-title{overflow: hidden;text-overflow: ellipsis;width: 100%;white-space: nowrap; display: block; line-height: 24px;}
+		.mdui-card-product-content .mdui-card-product-discountprice{color: #B4272D; line-height: 16px; display: inline-block;font-size: 16px;}
+		.mdui-card-product-content .mdui-card-product-discountprice::before{content: "NT$";font-size: 12px;line-height: 12px;}
+		.mdui-card-product-content .mdui-card-product-orignalprice{color: #7B7B7B; line-height: 12px;font-size: 12px; display: inline-block;text-decoration: line-through;}
+		.mdui-card-product-content .mdui-card-product-orignalprice::before{content: "NT$";font-size: 12px;line-height: 12px;}
+		.mdui-toolbar-title .top-left-options .mdui-btn-icon img {width: 24px;height: 24px;}
+		
+		/*折多多下单成功*/
+		.order-head {color: #fff;padding-bottom: 18px;background:#fff;}
+		.order-head-success {padding: 20px 20px 5px;}
+		.order-head-success img {width: 55px;height: 55px;display: block;}
+		.order-head-success div:nth-child(2) {margin: auto 0 auto 15px;}
+		.order-head-success span {display: block;width:100%;text-align: center;font-weight:bold;}
+		.order-head-success span:nth-child(1) {font-size: 18px;color:#ED1B2E;}
+		.order-head-success span:nth-child(2) {font-size: 14px;margin-top: 10px;color:#222;}
+		.order-head-product .order-code {font-size: 15px;}
+		.order-head-product {background-color: #fff;color: #222222;margin: 10px;padding: 10px;border-radius: 5px;}
+		.order-head-product .order-code button {color: #B4272D;border: 1px solid #B4272D;border-radius: 4px;min-width: auto;padding: 4px 5px;line-height: 13px;height: 20px;font-size: 12px;margin-top: -4px;margin-left: 8px;}
+		.order-head-product .order-number {font-size: 13px;color: #777777;margin-top: 7px;}
+		.order-head-product .order-number span {margin-left: 15px;}
+		.order-head-product .order-address {background-color: #FEFCEF;color: #F9670F;padding: 10px 5px;margin-top: 18px;margin-left: -4px;margin-right: -4px;}
+		.order-head-product .order-product {margin-top: 10px;overflow-x: auto;white-space: nowrap;display: flex;}
+		.order-head-product .order-product img {width: 80px;height: 80px;border-radius: 5px!important;display: block;}
+		.order-head-product .order-product div:first-child {margin-left: 0;}
+		.order-head-product .order-product div {position: relative;margin-left: 8px;}
+		.order-head-product .order-product span {position: absolute;right: 0;bottom: 5px;background-color: rgba(0, 0, 0, 0.5);color: #fff;padding: 3px 5px 1px 5px;font-size: 12px;border-top-left-radius: 50px;border-bottom-left-radius: 50px;}
+		.order-head-product div:first-child {position: relative;}
+		.order-head-product .icon-right {position: absolute;top: 14px;right: 0;width: 6px;}
+		.order-head-link {text-align: center;margin-top: 16px;}
+		.order-head-link a {border-radius: 50px;border: 1px solid #fff;font-size: 16px;color: #fff;width: 31%;padding: 8px;display: inline-block;text-decoration: none;}
+		.order-head-link a:first-child {margin-right: 5px;}
+
+		/*折多多底部推荐*/
+		.module-31 {background: #f4f4f4;color: #000;padding: 8px 2.4% 0;box-sizing: border-box;display: flex;justify-content: space-between;flex-wrap: wrap;}
+		.module-31 .module-31-card {width: 48.8%;margin-bottom: 8px;box-shadow: none;box-sizing: border-box;text-decoration: none;border-radius: 0px;background: #FFFFFF;border-radius: 6px;}
+		.module-31 .module-31-card > a {text-decoration: none;}
+		.module-31 .module-31-card .mdui-card-media {padding-bottom: 100%;}
+		.module-31 .module-31-card .mdui-card-media > img {position: absolute;width: 100%;height: 100%;top: 0;left: 0;border-radius: 0px !important;}
+		.module-31 .module-31-content {padding: 8px;color: #000;}
+		.module-31 .module-31-content .module-31-title {   
+			 height: 18px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			display: -webkit-box;
+			-webkit-line-clamp: 1;
+			-webkit-box-orient: vertical;
+			width: 100%;
+			font-size: 13px;
+			line-height: 18px;
+		}
+		.module-31 .module-31-content .module-31-tag {height: 16px;overflow: hidden;font-size: 0;margin: 8px 0;}
+		.module-31 .module-31-content .module-31-tag span:last-child {margin-right: 0;}
+		.module-31 .module-31-content .module-31-tag span {display: inline-block;padding: 0 7px;border: none;border-radius: 8px;font-size: 12px;color: #E56214;line-height: 16px;height: 16px;background: #FCE9D5;box-sizing: border-box;margin-right: 6px;}
+		.module-31 .module-31-content .module-31-price {font-size: 0;line-height: normal;}
+		.module-31 .module-31-content .module-31-discountprice {font-size: 22px;color: #ED1B2E;line-height: 22px;}
+		.module-31 .module-31-content .module-31-discountprice:before {content: '';margin-right: 1px;font-size: 12px;line-height: 12px;}
+		.module-31 .module-31-content .module-31-price > span:last-child {position: absolute;font-size: 12px;color: #777777;right: 8px;bottom: 8px;}
+
+		/*適配iphone5*/
+    	@media (max-width: 320px){
+			.mdui-card-aggregation > .mdui-card-product-content .mdui-card-product{width: 110px;}
+			.mdui-card-aggregation > .mdui-card-content{height: 190px;}
+			.mdui-card-aggregation .mdui-card-product-content .mdui-card-product{width: 100px;}
+		}
+		@media (min-width: 750px){
+			.mdui-card-aggregation .mdui-card-product-content .mdui-card-product{width: 180px;}
+			.mdui-card-aggregation > .mdui-card-content{height: auto;}
+		}
+
+		.serviceCard{padding: 12px;}
+		.serviceCard div{padding: 4px 0 10px;}
+		.serviceCard table{box-shadow: none}
+		.serviceCard table tr:first-child{background: #FBFBFB;font-weight: bold;}
+		.serviceCard table tr td{padding: 9px 0!important; line-height: 14px;text-align: center;border-right: 1px solid rgba(0, 0, 0, .12);}
+		.serviceCard table tr td:first-child{max-width: 60px;}
+		.serviceCard table tr td:last-child{border-right: 0;}
+		.serviceCard table tr td button{color: #B4272D; border: 1px solid #B4272D; border-radius: 4px;min-width: auto; padding: 4px 7px; line-height: 13px; height: 22px;font-size: 13px;}
+		.success_btn{
+			margin-top:24px;
+		}
+		.success_btn button{
+			display:block;
+			width:80%;height:38px;border:1px solid #ED1B2E;
+			border-radius:100px;color:#fff;
+			line-height:38px;
+			margin:0 auto;margin-bottom:10px;background:#ED1B2E;font-size:16px;outline: none;
+		}
+		.success_btn button a{
+			color:#ED1B2E;display:block;
+			text-decoration: none;
+		}
+		.success_btn button:nth-child(2){
+			background:#fff;color:#ED1B2E;
+		}
+		.seeDetail{
+			text-align: center;
+			}
+		.seeDetail a{
+			color:#777;text-decoration: none;
+		}
+		.seeDetail a img{
+			width: 8px;
+			position: relative;
+			top: 2px;
+			left: 4px;
+		}
+		.blank_model{
+			position:fixed;width:100%;height:100%;background:rgba(0,0,0,0.6);left:0;top:0;z-index: 1;display:none;
+		}
+		.share_plaform{
+			position:fixed;bottom:0;left:0;z-index: 2;width:100%;
+		}
+		.share_plaform ul{
+			list-style: none;
+			display:-webkit-flex;
+			display:flex;
+			padding:18px 5%;
+			background:#fff;border-radius:12px;
+			width: 83%;
+			margin:0 auto;
+		}
+		.share_plaform ul li{
+			display:inline-block;flex:1;margin-right:8%;
+		}
+		.share_plaform ul li a{
+			display:block;
+			text-align: center;
+			text-decoration: none;
+		}
+		.share_plaform ul li a i{
+			font-style: normal;
+			text-decoration: none;
+			font-size:12px;
+			color:#000;display:block;
+			margin-top:10px;
+		}
+		.share_plaform ul li:last-child{
+			margin-right:0;
+		}
+		.share_plaform ul li span{
+			display:block;
+		}
+		.share_plaform ul li span img{
+			display:block;width:100%;
+		}
+		.share_plaform button{
+			display:block;
+			width:93%;margin:15px auto;
+			background:#fff;border-radius:12px;
+			border:none;
+			color:#000;
+			font-size:16px;
+			padding:18px 0;outline: none;
+		}
+		.mdui-card-aggregation .mdui-card-header-new{
+			padding:0;
+		}
+		.mdui-card-aggregation .mdui-card-header-new .mdui-card-header-title{
+			color:#222;height:40px;line-height: 40px;display:-webkit-flex;display:flex;
+		}
+		.mdui-card-header-title-left{
+			position: relative;padding:0 4%;
+		}
+		.mdui-card-header-title-left a{
+			color:#222;text-decoration: none;
+		}
+		.mdui-card-header-title-left::before{
+			content: '';width: 1px;height: 19px;
+			background: #BCBCBC;position: absolute;right: 0;top: 10px;
+		}
+		.mdui-card-aggregation .mdui-card-header-new .mdui-card-header-title img{
+			width: 24px;
+			height: 24px;
+			position: relative;
+			top: 5px;
+		}
+		.mdui-card-header-title-right{
+			width: 100%;
+			overflow-x: auto;
+			overflow-y: hidden;
+			box-sizing: border-box;
+			white-space: nowrap;
+			padding:0 4%;
+		}
+		.mdui-card-header-title-right span{
+			display:inline-block;margin-right:28px;position: relative;
+		}
+		.mdui-card-header-title-right span:last-child{
+			margin-right:0;
+		}
+		.mdui-card-header-title-right span.active{
+			color:#B4272D;
+		}
+		.mdui-card-header-title-right span.active:before{
+			content:'';
+			position:absolute;
+			width:80%;height:3px;
+			background:#B4272D;bottom:0;left:10%;border-radius:10px;
+		}	
+		.module-31-card .module-31-btn{
+			display: flex;
+			align-items: baseline;
+			justify-content: space-between;
+			margin-top:8px;
+		}
+		.module-31-btn button{
+			background: #F18C29;
+			border-radius: 3px;
+			height: 26px;
+			border: none;
+			padding:0 13px;
+			box-shadow: none;
+			font-size: 14px;
+			color: #FFFFFF;
+			line-height: 14px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+		.module-31-originalprice{
+			font-size: 13px;
+			color: #777777;
+			text-align: right;
+			line-height: 13px;
+		}
+		/* 導航樣式 */
+		.mdui-nav{height:40px;background:#fff;overflow:hidden;flex-grow:1;margin-top:10px;}
+		.mdui-nav::-webkit-scrollbar {display: none;}
+		.mdui-nav .mdui-tab{box-sizing:border-box;min-height:initial;height:40px;padding-top:2px;-webkit-overflow-scrolling:touch}
+		.mdui-nav .mdui-tab::-webkit-scrollbar {display:none}
+		.mdui-nav .mdui-tab a{margin-right: 12px;text-transform: initial;padding: 0 6px;min-width:min-content;min-height:initial;color:#363636;opacity:1;height:38px;cursor:pointer;font-size: 16px; font-weight: bold;}
+		.mdui-nav .mdui-tab a:first-child{margin-left: 12px;}
+		.mdui-nav .mdui-tab a.mdui-tab-active{color:#ED1B2E;position: relative;}
+		.mdui-nav .mdui-tab a.mdui-tab-active::after{display: block;background: #ED1B2E;height: 3px;border-radius: 10px;content: '';width: calc(100% - 12px);position: absolute;bottom: 0;}
+		.module-35 .module-35-content .module-35-discountprice{
+			color:#ED1B2E !important;
+		}
+	</style>	
+	<script>
+		var montiorTime={start:0,end:0};function setStart(){montiorTime.start=(new Date).getTime()}function setEnd(){montiorTime.end=(new Date).getTime(),cacheSessionStorage.setCache("montiorTime",{aimsFromUrl:location.href,params:[montiorTime]})}
+	</script>
+</head>
+<body class="mdui-bottom-nav-fixed mdui-appbar-with-toolbar mdui-loaded" onload="setStart()" onbeforeunload="setEnd()">
+	<div class="mdui-appbar mdui-appbar-fixed mdui-shadow-0">
+		<div class="mdui-toolbar-title">
+			<div class="top-left-options">
+				<a href="../shop/index.html" class="mdui-btn mdui-btn-icon toHome text-icon-options">
+					<img src="https://d3o2c7bn83e5x8.cloudfront.net/image/icon/icon-homepage.png" />
+					<span class="text-foot">首页</span>
+				</a>
+			</div>
+			<div class="mdui-center mdui-valign" style="font-size: 16px;color: #000">訂購完成</div>
+			<!-- <div class="mdui-center mdui-valign point-progress mdui-logo">
+				<ul>
+					<li class="active"><i>1</i></li>
+					<li class="active"></li>
+					<li class="active"><i>2</i></li>
+					<li class="active"></li>
+					<li class="active"><i>3</i></li>
+				</ul>
+				<ul>
+					<li class="active"><i>確認商品</i></li>
+					<li class="active"><i>填寫付款資料</i></li>
+					<li class="active"><i>訂購完成</i></li>
+				</ul>
+			</div> -->
+			<!-- <div class="mdui-center mdui-valign point-progress point-progress-min">
+				<ul>
+					<li class="active"><i>1</i></li>
+					<li class="active"></li>
+					<li class="active"><i>2</i></li>
+				</ul>
+				<ul>
+					<li class="active"><i>確認訂單信息</i></li>
+					<li class="active"><i>訂購完成</i></li>
+				</ul>
+			</div> -->
+			<div class="top-right-options">
+				<!-- <a href="../user/order.html" class="text-icon-options"><img src="https://d3o2c7bn83e5x8.cloudfront.net/image/icon/icon-order.png" /></a> -->
+			</div>
+		</div>
+	</div>
+	
+	<!--有订单-->
+	<div id="type1" style="display: none;" >
+
+		<div class="order-head">
+			<div class="order-head-success">
+				<span>恭喜您, 訂購成功</span>
+				<span class="order-time">趕快邀請好友到折多多商城逛逛吧</span>
+				<div class="success_btn">
+					<button onclick="app.methods.shareinline()">分享商品給好友</button>
+					<button><a href="../shop/index.html">去首頁逛逛</a></button>
+				</div>
+			</div>
+			<!-- <div class="order-head-product">
+				<div>
+					<div class="order-code"></div>
+					<div class="order-number"></div>
+					<img class="icon-right" src="../image/icon-next.png"/>
+				</div>
+				<div class="order-address"></div>
+				<div class="order-product"></div>
+			</div> -->
+			<div class='seeDetail'>
+				<a href="../user/order.html?state=haveBack">查看訂單詳情<img class="icon-right" src="../image/icon-next.png"/></a>
+			</div>
+			<!-- <div class="order-head-link">
+				<a href="../shop/index.html">返回首页</a>
+				<a href="../user/order.html?state=haveBack">查看订单</a>
+			</div> -->
+		</div>
+
+		<!-- <div class="mdui-order">
+			<div class="mdui-text-center">
+				<img class="success" src="https://d3o2c7bn83e5x8.cloudfront.net/image/icon-success.png">
+			</div>
+			<div class="mdui-text-center mdui-m-y-1">
+				<span>下單成功</span>
+			</div>
+		</div>
+		<div class="mdui-detail"></div>
+		<div class="mdui-text-center mdui-order-tip">
+	    	<span>建議保存<span class="mdui-order-tip-text">訂單號</span>和<span class="mdui-order-tip-text">商城鏈接</span>，方便查詢訂單</span>
+		</div>
+		<div style="background:#fff;padding-bottom: 24px;margin-top: -2px">
+			<a href="../user/order.html?state=haveBack" class="mdui-btn mdui-btn-block" style="height: 38px; border-radius: 4px; background: #FFFFFF;border: 1px solid #B4272D; width: 90%; margin: 0px auto; font-size:16px;color: #B4272D;">查詢訂單</a>
+			<a href="javascript:void(0)" onclick="tools.openTech()" class="mdui-btn mdui-btn-block" style="height: 38px; border-radius: 4px; background: #B4272D;border: 1px solid #B4272D; width: 90%; margin: 0px auto;margin-top: 12px; font-size:16px;color: #fff;">下載APP</a>
+		</div> -->
+			
+		<!-- <div class="mdui-card mdui-card-aggregation serviceCard">
+			<div>如果您有任何售後的問題，可以通過以下方式聯系我們</div>
+			<table class="mdui-table">
+				<tr>
+					<td>方式</td>
+					<td>賬號ID/號碼</td>
+					<td>操作</td>
+				</tr>
+				<tr>
+					<td>Messenger</td>
+					<td>折多多</td>
+					<td><button class="mdui-btn mdui-color-default mdui-btn-copy" data-clipboard-text="折多多">復制</button></td>
+				</tr>
+				<tr>
+					<td>Line</td>
+					<td>@841dxfwu</td>
+					<td><button class="mdui-btn mdui-color-default mdui-btn-copy" data-clipboard-text="@841dxfwu">復制</button></td>
+				</tr>
+				<tr>
+					<td>客服電話</td>
+					<td>+852 51013032</td>
+					<td><button class="mdui-btn mdui-color-default mdui-btn-copy" data-clipboard-text="+852 51013032">復制</button></td>
+				</tr>
+			</table>
+		</div> -->
+		<!-- 推薦列表 -->
+		<!-- <div class="mdui-card-aggregation" style='margin-top:10px;background:#fff;'>
+			<div class="mdui-card-header mdui-card-header-new">
+				<div class="mdui-card-header-title">
+					<div class='mdui-card-header-title-left'>
+						<a href="../shop/index.html"><img src="https://d3o2c7bn83e5x8.cloudfront.net/image/icon/icon-homepage.png"> 首頁</a>
+					</div>
+					<div class='mdui-card-header-title-right' id='hd-list-new'>
+						
+					</div>
+				</div>
+				<div class="list-new">
+					<div class='list-new-index'></div>
+					<div class='list-new-list'>
+						<span></span>
+					</div>
+				</div>
+			</div>
+		</div> -->
+		<div class="mdui-nav"></div>
+		<div class="mdui-container-fluid mdui-page-container"></div>
+		<!--同类商品-->
+		<div class="mdui-card mdui-card-aggregation mdui-card-agg-list"></div>
+
+		<!--人气爆款-->
+		<div class="mdui-card mdui-card-aggregation mdui-card-suggest-list"></div>
+
+	</div>
+	
+	<!--没有订单-->
+	<div id="type2" style="display: none;" >
+		<div class="mdui-order mdui-order-2">
+			<div class="mdui-text-center">
+				<img class="success" src="https://d3o2c7bn83e5x8.cloudfront.net/image/icon-success.png">
+			</div>
+			<div class="mdui-text-center mdui-m-y-2" style="font-size: 16px;">
+				<span>下單成功</span>
+			</div>
+	        
+	        <div class="mdui-text-center" style="font-size: 14px;color: #7B7B7B;">
+	        	<span>歡迎您再次光臨折多多</span>
+	        </div>
+		</div>
+		<div class="mdui-text-center mdui-order-tip">
+	    	<span class="mdui-order-tip-text">3s</span>後將自動進入折多多</span>
+	    </div>
+	    <a href="../shop/index.html" class="mdui-btn mdui-btn-block" style="height: 38px; border-radius: 4px; background: #FFFFFF;border: 1px solid #B4272D; width: 90%; margin: 0px auto;margin-top: 16px; font-size:16px;color: #B4272D;">進入商城</a>
+	    <a href="../user/order.html" class="mdui-btn mdui-btn-block" style="height: 38px; border-radius: 4px; background: #B4272D;border: 1px solid #B4272D; width: 90%; margin: 0px auto;margin-top: 16px; font-size:16px;color: #fff;">查詢訂單</a>
+	</div>
+
+	<!-- 分享彈窗 -->
+	<div class='blank_model' onclick="app.methods.shareinnone()"></div>
+	<div class="share_plaform" style="display:none;">
+		<ul class='share_plaform_ul'>
+			<li>
+				<a id='line-share' href="javascript:;">
+					<span><img src="../image/icon-line.png" alt=""></span>
+					<i>LINE</i>
+				</a>
+			</li>
+			<li>
+				<a id='facebook-share' href="javascript:;" target="_blank">
+					<span><img src="../image/icon-facebook.png" alt=""></span>
+					<i>Facebook</i>
+				</a>
+			</li>
+			<li>
+				<a id='fb-messenger-share' href="javascript:;" class="mdui-btn-copy-messenger">
+					<span><img src="../image/icon-messenger.png" alt=""></span>
+					<i>Messenger</i>
+				</a>
+			</li>
+			<li>
+				<a id='copy-url'  onclick="app.methods.shareinnone()" class="mdui-btn-copy" href="javascript:;" data-clipboard-text="">
+					<span><img src="../image/icon-copy.png" alt=""></span>
+					<i>拷貝鏈接</i>
+				</a>
+			</li>
+		</ul>
+		<button class='share_plaform_btn' onclick="app.methods.shareinnone()">
+			取消
+		</button>
+	</div>
+</body>
+<script src="https://d3o2c7bn83e5x8.cloudfront.net/dist/mdui/js/mdui.js"></script>
+<script src="https://d3o2c7bn83e5x8.cloudfront.net/dist/clipboard/dist/clipboard.min.js"></script>
+<script src="https://d3o2c7bn83e5x8.cloudfront.net/dist/art-template/lib/template-web.js"></script>
+<script src="https://d3o2c7bn83e5x8.cloudfront.net/js/echo.js"></script>
+<script src="https://d3o2c7bn83e5x8.cloudfront.net/js/jquery-2.1.0.js"></script>
+<script src="https://d3o2c7bn83e5x8.cloudfront.net/dist/Swiper/js/swiper.min.js"></script>
+<script src="../js/templateImport.js?v=20201016"></script>
+<script src="https://d3o2c7bn83e5x8.cloudfront.net/js/moment.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script src="../js/common.js?v=20201019"></script>
+<script>
+	commonConfig.addUtJsAsync('https://www.googletagmanager.com/gtag/js?id=' + commonConfig.getGATracking());
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag("config",commonConfig.getGATracking());
+	if(commonConfig.getGATracking() != 'UA-117174835-6'){
+		gtag("config",'UA-117174835-6');
+	}
+</script>
+<script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', commonConfig.getFbPiexId());
+    fbq('track', 'PageView');
+</script>
+
+<!--底部推荐-->
+<script id="mdui-card-aggregation-text" type="text/html">
+	<div class="mdui-container-fluid mdui-page-container">
+		<div class="pro_box">
+			<div class="mdui-row module-31">
+				<% for (var i = 0; i < list.length; i++) { %>
+				<div class="mdui-card module-31-card">
+					<a href="../product/index.html?id=<%=list[i].id%>">
+						<div class="mdui-card-media">
+							<img src="<%=list[i].productImageUrl%>"/>
+						</div>
+						<div class="mdui-card-content module-31-content">
+							<div class="module-31-title"><%=list[i].title%></div>
+							<!-- <div class="module-31-tag">
+								<span><%=list[i].flag%></span>
+							</div> -->
+							<div class="module-31-bottom">
+								<div class="module-31-price" style='font-size:12px;margin-top:8px;color:#ED1B2E;'>
+									折後價NT$<span class="module-31-discountprice" style='font-size:22px;'><%=list[i].minPrice%></span>起
+									<s style='color:#777;marign-left:5px;'>NT$<%=list[i].originalPrice%></s>
+								</div>
+							</div>
+							<div class="module-31-btn">
+								<button><%=$imports.discountnew(list[i].minPrice, list[i].originalPrice)%>折起</button>
+								<span class="module-31-originalprice"><%=$imports.buyCount(list[i].id)%>件已出</span>
+							</div>
+						</div>
+					</a>
+				</div>
+				<% } %>
+			</div>
+		</div>
+	</div>
+</script>
+<!-- 導航 -->
+<script id="mdui-tab-container" type="text/html">
+	<div id="productTab" class="mdui-tab">
+		<% for (var i = 0; i < list.length; i++) { %>
+			<% if (list[i].isTopNavigation) { %>
+				<a id="<%=list[i].id%>" _index="<%=i%>"><%=list[i].name%></a>
+			<% } %>
+		<% } %>
+	</div>		
+</script>
+<!-- ---- -->
+
+<script>
+    var $$ = mdui.JQ;
+    var app = {
+        data : {
+        	leftTime : 5,
+			userOrderCode : [],
+			second_nav: [],
+			recommendList: [],
+			page: 0, // 页数
+			module_page_state: false, // 模块-页面级-加载完成
+			should_clear: false, // 清除模块盒子状态
+			more_page: true, // 分页未完成
+			ajax_type: 'page', // 加载状态（page|sub）
+			subId: null,
+			page_length: 2, // 每页模块长度 TODO
+			module_page: {},
+        } ,
+        methods : {
+            init : function(){
+				app.methods.initData();
+				tools.initScopeInfo();
+				app.methods.getClick();
+				app.methods.initClipboard();
+				app.methods.initClipboardMess();
+				app.methods.initNavInfo();
+				app.methods.androidFbbrower();
+				// 新增标签用于分享
+				let headHtml = document.getElementsByTagName('head')[0];
+				let productid  = getCache('orderProducts-order-buy')[0].productId
+				if(productid != undefined || productid != null)
+				$$('#ogUrl').attr('content', 'https://www.zdd.com.tw/share/product/' + productid)
+			},
+			// 解決安卓低版本facebook瀏覽器會遮住底部的問題
+			androidFbbrower: function(){
+				// 新增
+				if(tools.getPlatform() == 'Android' && tools.getBrowerForm() == 'FB'){
+					$$('.share_plaform').css({
+						'bottom': '50px'
+					})
+				}
+			},
+			// 底部推荐
+			initUserFootprint : function(orderCode){
+				// 相似商品
+				if($$('.mdui-card-suggest-list').html() == ''){
+					$$.ajax({
+						url: commonConfig.websitePrefix() + '/api/recommend/similar/' + orderCode,
+						success: function(data) {
+							if(data.statusCode == 'OK') {
+								if(data.body.length > 8){
+									data.body.length = 8;
+								}
+								$$('.mdui-card-agg-list').html(template('mdui-card-aggregation-text', {'list': data.body,'tit':'同類商品','source':'SIMILAR'}));
+							}
+						}
+					});
+				}
+			},
+			// 底部列表商品
+			loadProductList: function(secondNav) {
+				let listHtml = ''
+				secondNav.map((item, index) => {
+					listHtml += '<span onclick=app.methods.listData(this,"'+ item.pageId +'")>'+ item.pageName +'</span>'
+				})
+				$$('#hd-list-new').html(listHtml)
+				$$('#hd-list-new span').eq(0).trigger('click')
+			},
+			listData: function(thatis,productId){
+				$(thatis).addClass('active').siblings().removeClass('active')
+				// 加载数据
+				app.methods.clickLoadData(productId)
+			},
+			loadingNewData: function(productId) {
+				$$.ajax({
+					beforeSend : function(){
+						app.methods.loading();
+					},
+					url : commonConfig.websitePrefix() + '/api/product/ad/' + productId,
+					success: function (data) {
+						app.data.recommendList = data.body.productList
+						$$('.mdui-page-container').html(template('mdui-card-aggregation-text', {'list': app.data.recommendList }));
+					},
+					complete : function(){
+						app.methods.hideLoading();
+					},
+					error: function(){
+						
+					}
+				});
+			},
+			// 點擊加載
+			clickLoadData: function(proId){
+				if(proId == 'recommend'){
+					// console.log(app.data.recommendList)
+					// 直接加载显示数据
+					$$('.mdui-card-agg-list').html(template('mdui-card-aggregation-text', {'list': app.data.recommendList }));
+				}else{
+					// 加载详情接口
+					$$.ajax({
+						beforeSend : function(){
+							// app.methods.loading();
+						},
+						url : commonConfig.websitePrefix() + '/api/product/aggregatePage/' + proId,
+						success: function (data) {
+							// 格式化数据
+							app.data.module_page = data.body
+							if(!app.data.module_page || app.data.module_page.length == 0){
+								mdui.snackbar({message: '正在施工，带您了解更多产品(=^_^=)...',position: 'top',timeout:500});
+								$$('#hd-list-new span').eq(0).trigger('click')
+								return;
+							}
+							// 直接加载显示数据
+							$$('.mdui-card-agg-list').html(template('mdui-card-aggregation-text', {'list': data.body }));
+							
+						},
+						complete : function(){
+							// app.methods.hideLoading();
+							//图片懒加载
+							echo.init({offset: 0,throttle: 0});
+						},
+						error:function(error){
+							// if(!error.responseText){
+							// 	window.location.href='/index.html'
+							// }
+						}
+					});
+				}
+				
+			},
+			// 初始化
+            initData : function(){
+				var submitOrder = tools.getURLParam('code').split(',') // 结算页传过来的订单号
+				// submitOrder = ['XR1074450916'] // 货到付款 XR1074712942
+				// submitOrder = ['XR1074450876'] // 信用卡
+				if(!submitOrder || submitOrder.length == 0 || submitOrder[0] == ''){
+					// 没有订单
+					$$('#type2').show();
+					$$('body').css({background:'#fff'})
+					// app.methods.circleNumber() // 倒计时的显示
+					// window.setInterval("app.methods.circleNumber()", 1000) // 倒计时跳转
+				}else{
+					// 有订单
+                    $$('#type1').show()
+					// app.methods.initUserFootprint(submitOrder[0]) // 底部推荐
+					submitOrder.map(function(e){app.methods.initOrderMes(e)}) // 查询订单
+					cacheLocalstorage.setCache("orderCode", submitOrder[0])
+					// history.replaceState(null, null , window.location.origin + window.location.pathname)
+				}
+			},
+			// 打開分享彈框
+			shareinline: function(){
+				$$('.blank_model').show()
+				$('.share_plaform').slideDown(300)
+				// 为分享链接赋值 location.host
+				let productid  = getCache('orderProducts-order-buy')[0].productId
+				$$('#line-share').attr('href', 'line://msg/text/' +  encodeURIComponent(location.protocol + '//'+ 'www.zdd.com.tw')+'/share/product/'+ productid)
+				$$('#facebook-share').attr('href', 'https://www.facebook.com/sharer/sharer.php?u='+ encodeURIComponent(location.protocol + '//' + 'www.zdd.com.tw') + '/share/product/'+ productid)
+				if( tools.getPlatform() == 'IOS' && tools.getBrowerForm() == 'FB'){
+					$$('#fb-messenger-share').attr('data-clipboard-text', location.protocol + '//' + 'www.zdd.com.tw'+ '/share/product/'+ productid )
+				}else{
+					$$('#fb-messenger-share').attr('href', "fb-messenger://share/?link="+ encodeURIComponent(location.protocol + '//' + 'www.zdd.com.tw')+ '/share/product/'+productid)
+				}
+				$$('#copy-url').attr('data-clipboard-text', location.protocol + '//' + 'www.zdd.com.tw'+ '/share/product/'+ productid )
+			},
+			shareinnone: function(){
+				$$('.blank_model').hide()
+				$('.share_plaform').slideUp(300)
+			},
+			// 查询订单
+			initOrderMes: function(orderCode){
+				$$.ajax({
+					url: commonConfig.websitePrefix() + '/api/zdd/order/querys/' + orderCode,
+					success: function(data) {
+						if(data.statusCode == 'OK') {
+							var newData = data.body[0];
+							var orderProducts = [];
+							newData.packageInfos.map(function(e){
+								var sku_infos = [];
+								tools.specialStringToArray(e.sku_infos).map(function(_e){
+									sku_infos.push({
+										"discountPrice": _e.discount_price,
+										"orderProductStatus": _e.order_product_status,
+										"productId": _e.product_id,
+										"productImageUrl": _e.product_image_url,
+										"productSkuBarcode": _e.product_sku_barcode,
+										"productSkuId": _e.product_sku_id,
+										"productSkuName": _e.product_sku_name,
+										"productTitle": _e.product_title,
+										"quantity": _e.quantity,
+									})
+								});
+								orderProducts = orderProducts.concat(sku_infos);
+							});
+							newData['orderProducts'] = orderProducts;
+							// 处理结算后数据
+							app.methods.initResetCacheData(data.body[0])
+							// 订单信息加载完毕
+							// $$('.mdui-detail').append(template("orderDetail",{data : [newData]}));
+							// 處理監測
+							app.methods.initDataMonitor(newData);
+						}
+					}
+				});
+			},
+
+			// 处理结算后数据
+            initResetCacheData : function(order){
+				var userOrderPro = getCache('orderProducts-order-buy') // 结算页传过来的已购买商品数据
+
+				// 重新整理購物車--將購買過的產品從購物車清除掉
+				if(!userOrderPro || userOrderPro.length == 0){return}
+            	try{
+					var _newcartProducts = [],
+						_cartProducts = getCache('orderProducts'),
+						quantity = 0, // 商品总数
+						productList = '', // 商品列表
+						startTime = moment(order.createdAt.substring(0, 19)).add(10, 'days').format('YYYY.MM.DD'), // 送达开始时间
+						endTime = moment(order.createdAt.substring(0, 19)).add(15, 'days').format('MM.DD') // 送达结束时间
+
+					// 显示订单详情
+					// $$('.order-time').html(`香港發出，預計${startTime}～${endTime}送達`)
+					$$('.order-code').html(`訂單號：${order.code}<button class="mdui-btn mdui-color-default mdui-btn-copy" data-clipboard-text="${order.code}">復制</button>`)
+					$$.each(order.productByAttrInfo, function(index, item){
+						$$.each(item.masterAttrList, function(index1, item1){
+							quantity += item1.quantity
+							productList += `<div><img src="${item1.productImageUrl}"/><span>NT${item1.quantity}件</span></div>`
+						})
+					})
+					$$('.order-number').html(`共${quantity}件商品<span>NT${moment(order.createdAt.substring(0, 19)).format('YYYY.MM.DD HH:mm')}</span>`)
+					$$('.order-address').html(`送至：${order.orderAddress.city}${order.orderAddress.district}${order.orderAddress.detail}`)
+					$$('.order-product').html(productList)
+
+					// 清除cookie中保存的贈品信息
+					$$.each(userOrderPro , function(index , orderProduct){
+						setCache('tmpGiftProducts-'+ orderProduct.productId , '' , -1)
+					})
+					
+					// 清除已购品
+					_cartProducts && _cartProducts.length > 0 && $$.each(_cartProducts , function(index , cartProduct){
+						var state = 0;
+						$$.each(userOrderPro , function(index , userOrder){
+							// TODO 删除价格校验 && userOrder.discountPrice == cartProduct.discountPrice
+							if(userOrder.productSkuId == cartProduct.productSkuId && cartProduct.isSelect == true){
+								state += 1;
+							}
+						});
+						if(state == 0){
+							_newcartProducts.push(cartProduct);
+						}
+					})
+					setCache('orderProducts' , _newcartProducts);
+					// setCache('orderProducts-order-buy', [])
+				}catch(e){
+					console.log(e)
+				}
+			},
+			
+			// 處理監測
+            initDataMonitor : function(newData){
+				if(newData.paymentType == 1){
+					return;
+                }
+				var _num_items = 0 , productItems = [] , contentIds = [] , _values = 0.0;
+				var monitorParams = [];
+				$$.each(newData.orderProducts , function(index , orderProduct){
+					_num_items += parseInt(orderProduct.quantity);
+					productItems.push({
+						id : orderProduct.productId,
+						name : orderProduct.productTitle + '('+ orderProduct.productSkuName +')',
+						quantity : orderProduct.quantity,
+						item_price : orderProduct.discountPrice || orderProduct.originalPrice,
+						price : orderProduct.discountPrice || orderProduct.originalPrice
+					});
+					monitorParams.push({
+						'eventAims': orderProduct.productId,
+						'count': orderProduct.quantity,
+						'eventName': 'SUBMIT',
+						'aimsCategory': 'PRODUCT'
+					});
+					contentIds.push(orderProduct.productId);
+					if(orderProduct.presents && orderProduct.presents.length > 0){
+						$$.each(orderProduct.presents , function(index2 , present){
+							_num_items += parseInt(present.quantity);
+							monitorParams.push({
+								'eventAims': present.productId,
+								'count': present.quantity,
+								'eventName': 'SUBMIT',
+								'aimsCategory': 'PRODUCT'
+							});
+							productItems.push({
+								id : present.productId,
+								name : present.productTitle + '('+ present.productSkuName +')',
+								quantity : present.quantity,
+								item_price : present.discountPrice || present.originalPrice,
+								price : present.discountPrice || present.originalPrice
+							});
+							contentIds.push(present.productId);
+						});
+					}
+                });
+				_values += newData.discountTotalPrice;
+                //TODO 购买成功。。。
+                var _fbgaparams = {
+					content_type: 'product',
+					transaction_id : newData.code,
+            		value : _values , 
+            		currency : newData.currency,
+            		content_name : 'checkout',
+            		content_category : 'checkout',
+            		content_ids : contentIds,
+            		num_items : _num_items,
+					contents: productItems,
+					items: productItems
+				};
+				newMonitor.addMonitorData(monitorParams);
+            	try{
+					fbq('track', 'Purchase' , _fbgaparams);
+					gtag('event', 'Purchase', _fbgaparams);
+					gtag("event", "purchase", _fbgaparams);
+            	}catch(e){
+            		console.log(e);
+            	}
+			},
+
+            hasProductPayed : function(products , productskuid){
+           		var result = false;
+           		$$.each(products , function(index , product){
+           			if(product.productSkuId == productskuid){
+           				result = true;
+           				return false;
+           			}
+           		});
+           		return result;
+           	},
+			
+			// 倒计时的显示
+			circleNumber : function(){
+            	if(app.data.leftTime > 0){
+            		app.data.leftTime -= 1;
+            		$$('#type2 .mdui-order-tip .mdui-order-tip-text').html(app.data.leftTime + 's');
+            	}else{
+            		window.location.href = '../shop/index.html';
+            	}
+			},
+			
+            initClipboard :function(){
+				var clipboard = new Clipboard('.mdui-btn-copy');
+                clipboard.on('success', function(e) {
+					mdui.snackbar({message: '複製成功!',position: 'top' , timeout : 1000});
+					newMonitor.addMonitor({
+						'eventAims': 'COPY',
+						'eventName': 'CLICK',
+						'aimsCategory': 'EVENT',
+					});
+				});
+				clipboard.on('error', function(e) {
+					mdui.snackbar({message: '複製失敗,請您手動複製!',position: 'top' , timeout : 2000});
+				});
+			},
+			initClipboardMess :function(){
+				
+				var clipboard = new Clipboard('.mdui-btn-copy-messenger');
+                clipboard.on('success', function(e) {
+					mdui.snackbar({message: '複製成功，請粘貼到Messenger發送給好友',position: 'top' , timeout : 1000});
+					newMonitor.addMonitor({
+						'eventAims': 'COPY',
+						'eventName': 'CLICK',
+						'aimsCategory': 'EVENT',
+					});
+					app.methods.shareinnone()
+				});
+				clipboard.on('error', function(e) {
+					mdui.snackbar({message: '複製失敗,請您手動複製!',position: 'top' , timeout : 2000});
+				});
+			},
+			getClick: function(){
+				$$('.toHome').on('click', function(e){
+					e.stopPropagation();
+					cacheSessionStorage.setCache("i_to_home", {
+						'eventAims': 'HOME_ICON',
+						'eventName': 'CLICK',
+						'aimsFromUrl': location.href,
+						'aimsCategory': 'EVENT',
+					});
+				});
+			},
+			// 新增
+			initPageAdModule: function(){
+				let adlk = tools.getURLParam('adlk')
+				if(adlk && adlk != ''){
+					newMonitor.addMonitor({
+						'eventAims': adlk,
+						'eventName': 'VIEW',
+						'aimsCategory': 'AD',
+					});
+				}
+			},
+			initNavInfo: function(){
+				let header_data = {
+					requestId: $$.guid(),
+					requestTime: (new Date()).valueOf(),
+				};
+				if(tools.isSpHost()){
+					header_data['requestHost'] = configurationParameter.luxuryHost
+				}else{
+					header_data['requestHost'] = window.location.host
+				}
+				$$.ajax({
+					url: commonConfig.websitePrefix() + "/api/aggregate/page/secondaryNavigation",
+					headers: header_data,
+					success: function(data) {
+						if(tools.isSpHost()){
+							cacheSessionStorage.setCache('second-nav-sp' , data.body);
+						}else{
+							cacheSessionStorage.setCache('second-nav' , data.body);
+						}
+						app.data.second_nav = data.body;
+						app.data.second_nav.shift()
+						app.data.second_nav.unshift(
+							{
+								id: 'recommend',
+								name: '推薦',
+								isTopNavigation: true
+							}
+						)
+						// 一级导航
+						app.methods.initFirstNav();
+					}
+				})
+			},
+			getSession: function(module_datas){
+				var session_data = [];
+				module_datas.map(function(e){
+					var module_cache = cacheSessionStorage.getCache('aggregate-module-' + e.aggregate_module_id);
+					if(module_cache && module_cache != ''){
+						session_data.push(module_cache)
+					}
+				})
+				if(session_data.length != module_datas.length){
+					return [];
+				}else{
+					return session_data;
+				}
+			},
+			initModuleByIds : function(){
+				var modules_id = [];
+				if(app.data.ajax_type == 'sub'){
+					modules_id = app.data.module_sub_page
+				}else if(app.data.ajax_type == 'page'){
+					modules_id = app.data.module_page
+				}
+				// 根据序列加载模块
+				var this_page_module_datas = modules_id.slice(app.data.page * app.data.page_length, (app.data.page + 1) * app.data.page_length )
+				// 模块数据
+				var moduleIds_session = app.methods.getSession(this_page_module_datas);
+				if(moduleIds_session.length != 0){
+					app.methods.initModuleHTML({'aggregateModules': moduleIds_session});
+				}else{
+					if(this_page_module_datas.length == 0){
+						app.data.more_page = false;
+						return;
+					}
+					var params = '';
+					this_page_module_datas.map(function(e){params += 'aggregateModuleIds=' + e.aggregate_module_id + '&';});
+					params = params.slice(0, -1);
+					$$.ajax({
+						beforeSend : function(){
+							app.methods.loading();
+							app.data.module_page_state = true;
+						},
+						url : commonConfig.websitePrefix() + '/api/aggregate/page/moduleIds/details?' + params + '&viewType=h5',
+						success: function (data) {
+							if(data.body && data.body.length != 0){
+								try{
+								// 格式化数据
+								var _data = data.body;
+								if(this_page_module_datas.length != _data.length){
+									// TODO 补充重复数据，暂时支持 app.data.page_length == 2的情况
+									_data.push(data.body[0]);
+								}
+								_data.map(function(e){
+									e.products.map(function(_e){
+										if(typeof _e.flag == 'string' &&_e.flag && _e.flag != ''){
+											_e.flag = _e.flag.split(',');
+										}
+									});
+									cacheSessionStorage.setCache('aggregate-module-' + e.id, e);
+									moduleIds_session.push(e);
+								});
+								// 渲染
+								app.methods.initModuleHTML({'aggregateModules': moduleIds_session});
+								}catch(e){console.log(e)}
+							}
+						},
+						complete : function(){
+							app.methods.hideLoading();
+							app.data.module_page_state = false;
+						},
+						error:function(error){
+							if(!error.responseText){
+								mdui.snackbar({message: '好像出了點小問題,要不您先看看別的(=^_^=)...',position: 'top'});
+							}
+						}
+					});
+				}
+			},
+			loading: function(){
+				if(app.data.page == 0){
+					tools.loading(2001);
+				}else{
+					$$('.mdui-loading').show();
+				}
+			},
+			hideLoading: function(){
+				tools.hideLoading();
+				$$('.mdui-loading').hide();
+			},
+			initModuleHTML: function(aggregatePageModuleData){
+				// 渲染模块
+				if(!aggregatePageModuleData || !aggregatePageModuleData.aggregateModules || aggregatePageModuleData.aggregateModules.length == 0){
+					// 数据异常||加载完成
+					app.data.more_page = false;
+					return;
+				}else{
+					if(aggregatePageModuleData.aggregateModules.length != app.data.page_length){
+						app.data.more_page = false;
+					}else{
+						app.data.more_page = true;
+					}
+				}
+				app.methods.initPageViewRender(aggregatePageModuleData);
+				app.methods.hideLoading();
+				//图片懒加载
+				echo.init({offset: 667,throttle: 0});
+				// 还需要再次加载子页面
+				if(document.body.clientHeight < window.innerHeight){
+					app.data.should_clear = false;
+					app.data.page++;
+					app.methods.initModuleByIds();
+				}
+			},
+			clearOldCode: function(){
+				if(app.data.should_clear){
+					$$('.mdui-page-container').html('');
+					$$('script[attr="pageCustom"]').remove();
+					tools.removeCustomPageCssCode();
+				}
+			},
+			initPageViewRender : function(aggregatePageData){
+				// 准备数据
+				if(aggregatePageData){
+					// 清除盒子
+					app.methods.clearOldCode();
+					$$.each(aggregatePageData.aggregateModules , function(index , aggregateModule){
+						try{
+							if(aggregateModule.present){
+								app.methods.initMoudule(aggregateModule);
+							}
+						}catch(e){console.log(e);}
+					});
+				}else{
+					mdui.snackbar({message: '好像出了點小問題,要不您先看看別的(=^_^=)...',position: 'top'});
+				}
+			},
+			initMoudule: function(aggregateModule){
+				//加载CSS
+				tools.loadCssCode(aggregateModule.present.css,'pageCustom');
+				//加载模板
+				var guid = $$.guid();
+				$$('body').append('<script id="mdui-page-container-'+ guid +'" attr="pageCustom" type="text/html">' + aggregateModule.present.html + '<\/script>');
+				//完成数据渲染
+				var _domHtml = template('mdui-page-container-' + guid , {'aggregateModule' : aggregateModule}) ; 
+				$$('.mdui-page-container').append('<div class="pro_box" _index="'+aggregateModule.id+'">' + _domHtml + '</div>');
+				//自定义JS
+				if(aggregateModule.present.js && aggregateModule.present.js != ''){
+					eval(aggregateModule.present.js);
+				}
+			},
+			initPageOrder : function(){
+				app.data.module_page = cacheSessionStorage.getCache('pageModules' + app.data.id );
+				if(!app.data.module_page || app.data.module_page.length == 0){
+					$$.ajax({
+						beforeSend : function(){
+							app.methods.loading();
+						},
+						url : commonConfig.websitePrefix() + '/api/aggregate/page/moduleIds/info/' + app.data.id + (app.data.adlk && app.data.adlk != '' ? '?adlk=' + app.data.adlk : ''),
+						success: function (data) {
+							// 格式化数据
+							app.data.module_page = data.body
+							if(!app.data.module_page || app.data.module_page.length == 0){
+								mdui.snackbar({message: '正在施工，带您了解更多产品(=^_^=)...',position: 'top'});
+								app.methods.loading();
+								$$('.mdui-nav .mdui-tab > a').eq(0).trigger('click');
+								return;
+							}
+							cacheSessionStorage.setCache('pageModules' + app.data.id , app.data.module_page);
+							app.methods.initModuleByIds();
+						},
+						// complete : function(){
+						// 	app.methods.hideLoading();
+						// },
+						error:function(error){
+							if(!error.responseText){
+								mdui.snackbar({message: '好像出了點小問題,要不您先看看別的(=^_^=)...',position: 'top'});
+							}
+						}
+					});
+				}else{
+					app.methods.initModuleByIds();
+				}
+			},
+			initFirstNav:function (){
+				// 渲染
+				// console.log(app.data.second_nav)
+				$$('.mdui-nav').html(template('mdui-tab-container', {'list': app.data.second_nav}));
+				// 事件
+				$$('.mdui-nav .mdui-tab > a').off().on('click' , function(e){
+					
+					$$('.mdui-tab-flex .mdui-tab-toggle .arrow-down i').html('expand_more');
+					tools.hideLoading();
+					if(!$$(this).hasClass('mdui-tab-active')){
+						// 点击切换，adlk失效
+						if(app.data.id != $$(this).attr("id")){app.data.adlk = null;}
+						if($$(this).attr("id") == 'recommend'){
+							// 菜單列表
+							let productid  = getCache('orderProducts-order-buy')[0].productId
+							app.methods.loadingNewData(productid)
+						}else{
+							// 初始化
+							app.data.id = $$(this).attr("id");
+							app.data.noMonitor = null;
+							app.data.page = 0;
+							app.data.should_clear = true;
+							app.data.ajax_type = 'page';
+							app.data.subId = null;
+							app.methods.initPageAdModule();
+							// 初始化聚合模块id序列 
+							app.methods.initPageOrder();
+						}
+						// 点击效果
+						$$('.mdui-nav .mdui-tab > a').removeClass('mdui-tab-active');
+						$$(this).addClass('mdui-tab-active');
+						// 二级导航，一级导航横向定位
+						// app.methods.initSubNav();
+						// app.methods.initNavLeftPosition();
+					}
+				});
+				// 默認點擊第一個
+				$$('.mdui-nav .mdui-tab > a').eq(0).trigger('click');
+			}
+        },
+        init : function(){
+            app.methods.init();
+        }
+    };
+    $$(function () {
+        app.init();
+    });
+</script>
+
+

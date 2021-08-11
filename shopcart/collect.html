@@ -1,0 +1,2098 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="【折多多】訂單中心-購物，從折多多開始" />
+    <meta property="og:description"
+        content="折多多，您的專屬居家囤貨生活館。主營：居家生活、傢裝傢飾、3C小電、美容保養、戶外休閑。全站免運費 / 支持貨到付款 / 官方自營 / 100%正品保障 / 7天無憂退換貨。" />
+    <meta property="og:image" content="https://d3o2c7bn83e5x8.cloudfront.net/image/shareIcon-zdd.jpg" />
+    <title>折多多</title>
+    <meta name="description"
+        content="折多多，您的專屬居家囤貨生活館。主營：居家生活、傢裝傢飾、3C小電、美容保養、戶外休閑。全站免運費 / 支持貨到付款 / 官方自營 / 100%正品保障 / 7天無憂退換貨。">
+
+    <!-- 安卓平台 chrome -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="https://d3o2c7bn83e5x8.cloudfront.net/image/shareIcon-mini-zdd.jpg">
+    <!-- ios平台 safari -->
+    <!-- <meta name="apple-mobile-web-app-capable" content="yes"> -->
+    <!-- <meta name="apple-mobile-web-app-status-bar-style" content="black"> -->
+    <link rel="apple-touch-icon-precomposed" href="https://d3o2c7bn83e5x8.cloudfront.net/image/shareIcon-zdd.jpg">
+
+    <!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> -->
+
+    <meta name="renderer" content="webkit">
+    <!-- <meta name="shoppingCart"> -->
+    <!-- <meta name="customerService"> -->
+    <!-- <meta name="nav"> -->
+    <meta http-equiv="Expires" CONTENT="0">
+    <meta http-equiv="Cache-Control" CONTENT="no-cache">
+    <meta http-equiv="Pragma" CONTENT="no-cache">
+    <link rel="shortcut icon" href="https://d3o2c7bn83e5x8.cloudfront.net/image/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://d3o2c7bn83e5x8.cloudfront.net/dist/mdui/css/mdui.min.css">
+    <!-- <link rel="stylesheet" href="https://d3o2c7bn83e5x8.cloudfront.net/dist/Swiper/css/swiper.min.css"> -->
+    <link rel="stylesheet" href="../css/common.css?v=20210125">
+    <style>
+        body.mdui-bottom-nav-fixed {
+            /* padding-top: 70px; */
+            padding-bottom: 100px;
+        }
+
+        /* .scrape-together-reminder{text-align: center;color: #B4272D;position: fixed; right: 0; top: 40px; left: 0;max-width: 750px; margin: 0px auto; background: #F7E9EA; height: 30px; line-height: 30px; padding: 0px 4%; box-sizing: border-box;z-index: 1; cursor: pointer;font-size: 12px;box-shadow: inset 0 0 0 0 #DFDEDB;}
+		.scrape-together-reminder img {width: 15px;height: 15px;vertical-align: middle;margin-top: -5px;}
+		.scrape-together-reminder i{font-weight: 700;font-style: normal} */
+
+        .mdui-appbar .top-left-options.noNav>.left {
+            display: none;
+        }
+
+        .mdui-appbar .top-left-options.noNav>.text-icon-options {
+            margin-left: 0;
+        }
+
+        .mdui-appbar .top-left-options:not(.noNav)>.text-icon-options {
+            display: none;
+        }
+
+        .mdui-appbar .top-left-options:not(.noNav)+div+div .text-icon-options {
+            display: none;
+        }
+
+        .mdui-menu-left {
+            position: static;
+            display: block;
+            height: calc(100vh - 90px);
+            padding: 0;
+        }
+
+        .mdui-menu-left .navBox {
+            height: 100%;
+        }
+
+        .title-center {
+            font-size: 16px !important;
+            color: black !important;
+        }
+
+        .mdui-row {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        .mdui-icon {
+            position: absolute;
+            top: 23px;
+            right: 4%;
+            font-size: 24px;
+            margin-right: -10px;
+            color: #979797 !important;
+        }
+
+        .plan-all-box {
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            z-index: 6100;
+            display: none;
+            width: 100%;
+            max-width: 750px;
+            max-height: 100%;
+            border-top-left-radius: 6px;
+            border-top-right-radius: 6px;
+            overflow: hidden;
+            box-sizing: border-box
+        }
+
+        .plan-all-box .product-prams-box {
+            overflow-y: auto;
+            max-height: initial !important;
+            -webkit-overflow-scrolling: auto;
+        }
+
+        .plan-all-box .mdui-row {
+            margin-right: 0;
+            margin-left: 0;
+            padding-right: 0;
+        }
+
+
+        .plan-detail {
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            z-index: 6100;
+            display: none;
+            width: 100%;
+            max-width: 750px;
+            max-height: 100%;
+            border-top-left-radius: 6px;
+            border-top-right-radius: 6px;
+            overflow: hidden;
+            box-sizing: border-box
+        }
+
+        .plan-detail .product-prams-box {
+            overflow-y: auto;
+            max-height: initial !important;
+            -webkit-overflow-scrolling: auto;
+        }
+
+        .plan-detail .mdui-row {
+            margin-right: 0;
+            margin-left: 0;
+            padding-right: 0;
+        }
+
+        .check-plan {
+            color: #B4272D;
+            font-size: 14px;
+            height: 52px;
+            margin: 20px 0px 20px 0px;
+            background: #FBF4F4;
+            border-radius: 6px;
+            border: 1px solid #B4272D;
+        }
+
+        .no-check-plan {
+            color: #222222;
+            font-size: 14px;
+            height: 52px;
+            margin: 20px 0px 20px 0px;
+            background: rgba(255, 255, 255, 1);
+            border-radius: 6px;
+            border: 1px solid #bcbcbc;
+        }
+
+        .pay-list {
+            padding-bottom: constant(safe-area-inset-bottom);
+            padding-bottom: env(safe-area-inset-bottom);
+            overflow-x: hidden;
+        }
+
+        .pay-each {
+            position: relative;
+            transform: translate3d(0px, 0px, 0px);
+        }
+
+        .pay-each.animatedh {
+            transition: all 0.2s ease-in-out 0s;
+        }
+
+        .pay-order-swiper {
+            position: absolute;
+            left: calc(100% + 5px);
+            top: 0;
+            width: 90px;
+            height: 100%;
+            display: flex;
+        }
+
+        .btn-red {
+            width: 60px;
+            height: 60px;
+            font-size: 12px;
+            color: #ED1B2E;
+            background-color: #fff;
+            text-align: center;
+            border-radius: 50px;
+            margin: auto;
+        }
+
+        .btn-red img {
+            width: 18px;
+            margin: 12px auto 6px;
+            display: block;
+        }
+
+        /* sku选择 */
+        .cartDialog {
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            z-index: 6100;
+            display: none;
+            width: 100%;
+            max-width: 750px;
+            max-height: 100%;
+            border-top-left-radius: 6px;
+            border-top-right-radius: 6px;
+            overflow: hidden;
+            box-sizing: border-box
+        }
+
+        .cartDialog.btnBox .btnBox {
+            display: block
+        }
+
+        .cartDialog.btnBox #confirmSelected {
+            display: none
+        }
+
+        .cartDialog.confirmSelected .btnBox {
+            display: none
+        }
+
+        .cartDialog.confirmSelected #confirmSelected {
+            display: block
+        }
+
+        .cartDialog .mdui-row {
+            margin-right: 0;
+            margin-left: 0;
+            padding-right: 0;
+        }
+
+        .cartDialog .mdui-row .mdui-btn-small {
+            border: 1px solid #DFDEDB;
+            min-width: 50px;
+            margin-bottom: 8px;
+            margin-right: 8px;
+            padding: 0 10px;
+            color: #363636;
+            font-size: 12px !important;
+            height: initial !important;
+            line-height: initial !important;
+            min-height: 28px;
+        }
+
+        .cartDialog .mdui-row .mdui-btn-small.noInventory {
+            border: 1px dashed #DFDEDB;
+            color: #979797
+        }
+
+        .cartDialog .mdui-row .mdui-typo-body-1 {
+            line-height: 30px;
+            color: #7b7b7b
+        }
+
+        .cartDialog .product-prams-box {
+            overflow-y: auto;
+            max-height: initial !important;
+            -webkit-overflow-scrolling: auto;
+        }
+
+        .cartDialog .mdui-row .product-prams .mdui-btn.active {
+            color: #B4272D;
+            border-color: #B4272D
+        }
+
+        .cartDialog .originalPriceHtml {
+            font-size: 12px;
+            color: #bcbcbc;
+            text-decoration: line-through;
+        }
+
+        .cartDialog .originalPriceHtml::before {
+            margin-left: 6px;
+            content: "NT$";
+        }
+
+        .cartDialog .btnBox {
+            margin: 0 auto;
+            margin-top: 16px;
+            width: 92%;
+            border-radius: 19px !important;
+            overflow: hidden !important
+        }
+
+        .cartDialog .btnBox .mdui-col-xs-6 {
+            padding: 0;
+            font-size: 16px
+        }
+
+        .cartDialog .btnBox #buyNow-dialog {
+            border-top-left-radius: 19px;
+            border-bottom-left-radius: 19px
+        }
+
+        .cartDialog .btnBox #addToCart-dialog {
+            border-top-right-radius: 19px;
+            border-bottom-right-radius: 19px
+        }
+
+        .cartDialog .btnBox button {
+            height: 38px;
+            border-radius: 0
+        }
+
+        .cartDialog .mdui-btn.no-active {
+            opacity: 0.7 !important
+        }
+
+        .ban {
+            color: #bcbcbc;
+            text-decoration: line-through;
+        }
+
+        .ban img {
+            filter: grayscale(100%);
+        }
+
+        .ban .ban-btn {
+            pointer-events: none;
+            border: 1px solid #ededed !important;
+            pointer-events: none;
+        }
+
+        .empty-carts {
+            text-align: center;
+            height: 260px;
+            box-sizing: border-box;
+            padding-top: 48px;
+            display: none;
+        }
+
+        .empty-carts .cart-img-empty {
+            display: block;
+            margin: 0px auto;
+            width: 24%;
+            max-width: 100px;
+        }
+
+        .empty-carts .cart-tip-empty {
+            display: block;
+            color: #7B7B7B;
+            padding: 16px 0px;
+        }
+
+        .empty-carts .cart-empty-to-buy {
+            border: 1px solid #B4272D;
+            border-radius: 2px;
+            color: #B4272D;
+            line-height: 14px;
+            width: 110px;
+            height: 30px;
+            line-height: 30px;
+        }
+
+        .empty-carts .mdui-page-bottom {
+            position: absolute;
+            bottom: 0px;
+            width: 100%;
+            max-width: 750px;
+        }
+
+        #toTop {
+            bottom: calc(110px + constant(safe-area-inset-bottom));
+            bottom: calc(110px + env(safe-area-inset-bottom));
+        }
+
+        .delete-confirm {
+            width: 84%;
+        }
+
+        .delete-confirm .mdui-dialog-content .mdui-cart-product-sku-img {
+            width: 80px;
+            height: 80px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .delete-confirm .mdui-dialog-content .mdui-cart-product-sku-info {
+            width: calc(100% - 90px);
+            height: 90px;
+            position: relative;
+            top: 0px;
+            float: right;
+        }
+
+        .delete-confirm .mdui-dialog-content .mdui-cart-product-sku-info .mdui-list-item-title {
+            font-size: 14px;
+            color: #363636;
+            margin-top: 12px;
+        }
+
+        .delete-confirm .mdui-dialog-content .mdui-cart-product-sku-info .mdui-list-item-text {
+            font-size: 12px;
+            color: #7B7B7B;
+            margin-top: 12px;
+        }
+
+        .delete-confirm .mdui-dialog-title {
+            text-align: center;
+        }
+
+        .delete-confirm .mdui-dialog-actions {
+            padding: 0px;
+            display: flex;
+        }
+
+        .delete-confirm .mdui-dialog-actions .mdui-btn {
+            margin: 0px;
+            padding: 0px;
+            width: 50%;
+            background: #FAFAFA;
+            height: 48px;
+            line-height: 48px;
+            border-top: 1px solid #EDEDED;
+            color: #7B7B7B;
+            font-size: 16px;
+        }
+
+        .delete-confirm .mdui-dialog-actions .mdui-btn:first-child {
+            border-right: 1px solid #EDEDED;
+            color: #B4272D;
+        }
+
+        #all-plan-box {
+            bottom: calc(50px + env(safe-area-inset-bottom));
+        }
+
+        .shoppingCart-num {
+            border: 1px solid #fff;
+            width: auto;
+            min-width: 16px;
+            box-sizing: border-box;
+            padding: 0 2px;
+            border-radius: 8px;
+            top: calc(50% - 22px);
+            right: calc(50% - 20px);
+            font-size: 10px
+        }
+    </style>
+    <script>
+        var montiorTime = { start: 0, end: 0 }; function setStart() { montiorTime.start = (new Date).getTime() } function setEnd() { montiorTime.end = (new Date).getTime(), cacheSessionStorage.setCache("montiorTime", { aimsFromUrl: location.href, params: [montiorTime] }) }
+    </script>
+</head>
+
+<body class="mdui-bottom-nav-fixed mdui-appbar-with-toolbar mdui-loaded mdui-theme-primary-red" onload="setStart()" onbeforeunload="setEnd()">
+    <div class="mdui-appbar mdui-appbar-fixed mdui-shadow-0">
+        <div class="mdui-toolbar-title">
+            <div class="top-left-options"><a class="text-icon-options" href="javascript:void(0)"
+                    onclick="tools.goBack();"><img
+                        src="https://d3o2c7bn83e5x8.cloudfront.net/image/icon/icon-back.png"></a></div>
+            <div class="mdui-center">
+                <span class="title-center">購物車</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="scrape-together-reminder">
+		<span><img src="../image/icon/icon-caveat.png" /> 因新春物流停運 1.25日之後的訂單 延遲到2.21日後發貨</i></span>
+	</div> -->
+
+    <div id="collect-list" class="pay-list">
+        <!-- <div class="mdui-row" style="background-color: #ffffff; border-radius: 8px;padding: 15px 10px 15px 12px;margin-top: 10px; ">
+            <div style="width:20px ;height: 20px; padding: 30px 12px  30px  0;float: left;">
+                <img class="check-icon active" src="https://d3o2c7bn83e5x8.cloudfront.net/image/icon_check.png"
+                    width="20px" height="20px">
+            </div>
+            <div style="width:80px ;height: 80px;float: left;">
+                <img src="//d2m1oqfe5v5e1u.cloudfront.net/2019/05/27/e0c35540-e9bc-405f-a9cf-bc5fbc5b04af.jpg"
+                    width="80px" height="80px">
+            </div>
+            <div style="padding-left:10px ; float: right; width: 230px;">
+                <div style="font-size:12px;
+                    font-family:PingFangSC-Regular,PingFang SC;
+                    font-weight:400;
+                    color:rgba(119,119,119,1);
+                    line-height:12px;"></div>
+                <div style="color:rgba(119,119,119,1);font-size:12px">
+                    牛油果绿T恤女短袖
+                </div>
+
+                <div style="height:26px;
+                background:rgba(255,255,255,1);
+                border-radius:6px;
+                line-height: 26px;
+                color: #222222;
+                padding:0 6px;
+                margin-top: 6px;
+                border:1px solid rgba(151,151,151,1);">
+                      <div style="float: left; ">
+                        請選擇方案
+                    </div>
+                    <div style="float: right;">
+                         <img src="https://d3o2c7bn83e5x8.cloudfront.net/image/icon/icon-right.png" width="7px"
+                            height="10px">
+                    </div>
+                </div>
+                <div style="margin-top: 12px;height: 14px; font-size: 14px;">
+                    <div style="float: left; ">
+                        方案：4件入，$1676
+                    </div>
+                    <div style="float: right;">
+                        x1 <img src="https://d3o2c7bn83e5x8.cloudfront.net/image/icon/icon-right.png" width="7px"
+                            height="10px">
+                    </div>
+                </div>
+                <div style="background:rgba(249,249,249,1);border-radius:6px;padding: 8px 6px;margin-top: 10px;color:#222222;font-size: 12px;line-height: 16px; width: 230px;height: 50px;">
+                    <div style="float: left;"> 
+                        <div>抹茶綠 (2)：M*1 L*1</div>
+                        <div>抹茶綠 (2)：M*1 L*1</div>
+                    </div>
+                    <div style="float: right;">
+                        <div style="float: right;">
+                            <img src="https://d3o2c7bn83e5x8.cloudfront.net/image/icon/icon-right.png" width="7px"
+                                height="10px">
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-top: 10px;width: 230px;height: 30px; ">
+                    <span>NT$1676</span><span>(現省$1520)</span>
+                </div>
+            </div>
+        </div> -->
+
+    </div>
+
+
+    <div class="mdui-color-white cartDialog">
+        <div id="cartDialog-head" class="mdui-row mdui-p-x-2" style="height: 30px;">
+
+        </div>
+        <div class="product-prams-box mdui-p-x-2" style="padding-top:5px">
+            <div style="background-color: #ffffff;">
+                <div id="select-sku">
+
+                </div>
+            </div>
+        </div>
+        <div id="show-sku" class="mdui-row mdui-p-x-2"
+            style="height: 40px; background-color: #FFFCEE; padding: 10px 0; display: none;">
+            <div style="width:40px;float: left;line-height: 20px;color: #777777;">
+                已選:
+            </div>
+            <div id="show-sku-text"
+                style="float: left;overflow-y: auto;max-height: initial !important;-webkit-overflow-scrolling: auto;height:40px ;">
+
+            </div>
+
+        </div>
+        <div id="show-all-num" class="mdui-row mdui-row mdui-p-x-2" style="height: 60px; background-color: #ffffff;">
+
+
+            <div style="float: left; width: 100px;">
+                <span id="show-all-num-text" style="font-size: 26px;line-height: 60px;">0</span>
+                <span style="font-size: 26px; color:#B4272D; line-height: 60px;">/</span>
+                <span id="show-all-num-all" style="font-size: 26px; color:#B4272D; line-height: 60px;">100</span>
+            </div>
+            <div id="product-submit" style="float: right; width:120px;
+			height:38px;
+			margin-top:11px ;
+			background:rgba(180,39,45,1);
+			line-height: 38px;text-align: center;
+			border-radius:19px;">
+                <span style="color:#ffffff;font-size: 16px;">確定</span>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="mdui-color-white plan-all-box">
+        <div id="plan-all-box-head" class="mdui-row mdui-p-x-2" style="height: 60px;">
+
+        </div>
+        <div class="product-prams-box mdui-p-x-2">
+            <div style="background-color: #ffffff;">
+                <div id="plan-model">
+
+                </div>
+                <div class="mdui-row" style="margin: 10px 0 10px 0; color: #777777; font-size: 13px;">
+                    ※如果有折價券，結帳輸入序號可享受折上折
+                </div>
+                <div class="mdui-row" style="margin: 14px 0 12px 0; color: #222222; font-size: 13px;">
+                    數量
+                </div>
+                <div style="width:120px;height:32px;border-radius:6px;border:1px solid #bcbcbc;"><img id="plan-num-del"
+                        src="https://d3o2c7bn83e5x8.cloudfront.net/image/icon/icon-del-cart.png" width="10px"
+                        height="10px" style="padding:11px 11px 11px 15px;float: left; ">
+                    <div id="plan-num-text"
+                        style="font-size: 16px;float: left;height: 32px; line-height: 32px; width:48px;text-align:center">
+                        1</div><img id="plan-num-add"
+                        src="https://d3o2c7bn83e5x8.cloudfront.net/image/icon/icon-add-cart.png" width="10px"
+                        height="10px" style="padding:11px 15px 11px 11px;float: left; ">
+                </div>
+            </div>
+        </div>
+        <div class="mdui-row mdui-p-x-2" style="height: 60px; background-color: #ffffff;">
+            <div style="float: left; width: 200px;text-overflow : ellipsis">
+                <span style="font-size: 14px; color:#B4272D; line-height: 60px;">NT$</span><span id="plan-now"
+                    style="font-size: 26px; color:#B4272D; line-height: 60px;">0</span><span id="plan-economize"
+                    style="font-size: 14px; color:#777777; line-height: 60px;"></span>
+            </div>
+            <div id="plan-submit" style="float: right; width:120px;
+			height:38px;
+			margin-top:11px ;
+			background:rgba(180,39,45,1);
+			line-height: 38px;text-align: center;
+			border-radius:19px;">
+                <span style="color:#ffffff;font-size: 16px;">下一步</span>
+            </div>
+        </div>
+    </div>
+    <div id="all-plan-box" class="mdui-row"
+        style="position: fixed;width: 100%;max-width: 750px;height: 50px;z-index: 1;background-color: #ffffff;display: none;">
+        <div style="float: left;line-height: 50px;margin-left: 12px;color:#7B7B7B" id="show-detail">
+            已选<span class="all-plan-num"></span>款 <img
+                src="https://d3o2c7bn83e5x8.cloudfront.net/image/icon/icon-up.png" width="10px" height="10px"
+                style="color: #BCBCBC;vertical-align: middle">
+        </div>
+        <div class="all-plan-submit" style="float: right; width:120px;
+        height:38px;
+        margin-top:11px ;
+        margin: 6px 8px;
+        background:rgba(180,39,45,1);
+        line-height: 38px;text-align: center;
+        border-radius:19px;">
+            <span style="color:#ffffff;font-size: 16px;">下一步</span>
+        </div>
+        <div style="float: right;">
+            <div style="text-align: right;color: #B4272D;margin-top: 4px;">
+                <span style="font-size: 12px;">NT$</span><span style="font-size: 22px;" class="all-plan-price"></span>
+            </div>
+            <div style="text-align: right;color: #777777; font-size: 12px;margin-top: 2px;">
+                總計現省:NT$<span class="all-plan-now"></span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="mdui-color-white plan-detail">
+        <div id="plan-detail-head" class="mdui-row mdui-p-x-2" style="height: 30px;">
+
+        </div>
+        <div class="product-prams-box mdui-p-x-2" style="padding-top:5px">
+            <div style="background-color: #ffffff;">
+                <div id="plan-detail-list">
+
+                </div>
+            </div>
+        </div>
+        <div id="show-all-num" class="mdui-row mdui-row mdui-p-x-2" style="height: 60px; background-color: #ffffff;">
+            <div style="float: left;">
+                <div style="text-align: left;color: #B4272D;margin-top: 4px;">
+                    <span style="font-size: 12px;">NT$</span><span style="font-size: 22px;"
+                        class="all-plan-price"></span>
+                </div>
+                <div style="text-align: left;color: #777777; font-size: 12px;margin-top: 2px;">
+                    總計現省:NT$<span class="all-plan-now"></span>
+                </div>
+            </div>
+            <div class="all-plan-submit" style="float: right; width:120px;
+			height:38px;
+			margin-top:11px ;
+			background:rgba(180,39,45,1);
+			line-height: 38px;text-align: center;
+			border-radius:19px;">
+                <span style="color:#ffffff;font-size: 16px;">下一步</span>
+            </div>
+        </div>
+    </div>
+
+    <!--无收藏-->
+    <div class="empty-carts">
+        <img class="cart-img-empty" src="https://d3o2c7bn83e5x8.cloudfront.net/image/no-order.png">
+        <span class="cart-tip-empty">您還未加購過任何商品哦</span>
+        <a href="../shop/index.html" class="mdui-btn cart-empty-to-buy">去逛逛</a>
+    </div>
+
+
+
+
+
+    <div class="mdui-bottom-nav mdui-row mdui-color-grey-50">
+        <div class="mdui-col-2-6">
+            <a href="../shop/index.html" class="text-icon-options mdui-bottom-nav-menu" >
+                <img src="https://d3o2c7bn83e5x8.cloudfront.net/image/icon/icon-home-0.png" />
+                <span>首頁</span>
+            </a>
+        </div>
+        <div class="mdui-col-2-6">
+            <a href="../shop/menu.html" class="text-icon-options mdui-bottom-nav-menu">
+                <img src="https://d3o2c7bn83e5x8.cloudfront.net/image/icon/icon-classification-0.png" />
+                <span>分類</span>
+            </a>
+        </div>
+        <div class="mdui-col-2-6">
+            <a href="../shopcart/collect.html" class="text-icon-options active mdui-bottom-nav-menu">
+                <img src="https://d3o2c7bn83e5x8.cloudfront.net/image/icon/icon-cart-1.png" />
+                <span>購物車</span>
+                <label class="text-icon-num shop_cart_num"></label>
+            </a>
+        </div>
+        <div class="mdui-col-2-6">
+            <a href="../user/order.html" class="text-icon-options mdui-bottom-nav-menu">
+                <img src="https://d3o2c7bn83e5x8.cloudfront.net/image/icon/icon-me-0.png" />
+                <span>查貨</span>
+            </a>
+        </div>
+    </div>
+</body>
+<script src="https://d3o2c7bn83e5x8.cloudfront.net/dist/mdui/js/mdui.min.js"></script>
+<script src="https://d3o2c7bn83e5x8.cloudfront.net/dist/clipboard/dist/clipboard.min.js"></script>
+<!-- <script src="https://d3o2c7bn83e5x8.cloudfront.net/dist/Swiper/js/swiper.min.js"></script> -->
+<script src="https://d3o2c7bn83e5x8.cloudfront.net/js/moment.js"></script>
+<script src="https://d3o2c7bn83e5x8.cloudfront.net/dist/art-template/lib/template-web.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script src="../js/jquery-3.0.0.js"></script>
+<script src="../js/common.js?v=20201103"></script>
+<script>
+    commonConfig.addUtJsAsync('https://www.googletagmanager.com/gtag/js?id=' + commonConfig.getGATracking());
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag("config", commonConfig.getGATracking());
+    if (commonConfig.getGATracking() != 'UA-117174835-6') {
+        gtag("config", 'UA-117174835-6');
+    }
+</script>
+<!-- Facebook Pixel Code -->
+<script>
+    !function (e, n, t, o, c, a, f) { e.fbq || (c = e.fbq = function () { c.callMethod ? c.callMethod.apply(c, arguments) : c.queue.push(arguments) }, e._fbq || (e._fbq = c), c.push = c, c.loaded = !0, c.version = "2.0", c.queue = [], (a = n.createElement(t)).async = !0, a.src = "https://connect.facebook.net/en_US/fbevents.js", (f = n.getElementsByTagName(t)[0]).parentNode.insertBefore(a, f)) }(window, document, "script"), fbq("init", commonConfig.getFbPiexId()), fbq("track", "PageView");
+</script>
+<!-- End Facebook Pixel Code -->
+<script>
+    var $$ = mdui.JQ;
+
+
+    var app = {
+        data: {
+            productInfo: null,
+            checkPlan: {},
+            checkSku: [],
+            selectSkuText: "",
+            collectList: [],
+            collectListPlan: cacheLocalstorage.getCache('collectListPlan1120') || {},
+            pinto: tools.getURLParam('pinto')
+        },
+        init: function () {
+            app.methods.initProdutList()
+           
+            app.methods.initShoppingCart()
+          
+
+            app.methods.androidFbbrower()
+
+        },
+        methods: {
+            initProdutList: function () {
+                var collectList = cacheLocalstorage.getCache('collectList1120') || [];
+                var collectListPlan = cacheLocalstorage.getCache('collectListPlan1120') || {};
+                var text = ""
+                for (var i = 0; i < collectList.length; i++) {
+                    if (i == 0) {
+                        text += collectList[i].split('-')[0]
+                    } else {
+                        text += "," + collectList[i].split('-')[0]
+                    }
+                }
+
+                // 无收藏
+                if (collectList.length == 0) {
+                    $$('.empty-carts').show()
+                } else {
+                    $$('.empty-carts').hide()
+                }
+
+                $$.ajax({
+                    method: 'GET',
+                    url: commonConfig.websitePrefix() + '/api/zdd/product/list-info/?productIds=' + text,
+                    beforeSend: function (xhr) { tools.loading(); },
+                    success: function (result) {
+                        app.data.collectList = result.body
+
+                        $$('#collect-list').html("")
+                        //渲染列表
+
+                        var arr = []   //商品下架
+                        var arr2 = []  //商品sku变更
+                        for (var i = 0; i < collectList.length; i++) {
+                            var lock = true
+                            var plan = true
+                            for (var x = 0; x < app.data.collectList.length; x++) {
+                                if (collectList[i].split("-")[0] == app.data.collectList[x].id) {
+                                    lock = false
+                                }
+                            }
+                            if (lock) {
+                                arr.push(collectList[i])
+                            }
+
+                        }
+                        for (var i = 0; i < app.data.collectList.length; i++) {
+                            if (collectListPlan[collectList[i]] && collectListPlan[collectList[i]].skuList) {
+                                var _oldSkuData = collectListPlan[collectList[i]].skuList
+
+                                var indexSku = 0
+                                if (_oldSkuData) {
+                                    for (var y = 0; y < _oldSkuData.length; y++) {
+                                        for (var x = 0; x < app.data.collectList[i].productSkus.length; x++) {
+                                            if ((_oldSkuData[y].id == app.data.collectList[i].productSkus[x].id) && (app.data.collectList[i].productSkus[x].inventory >= _oldSkuData[y].num)) {
+                                                indexSku++
+                                            }
+                                        }
+                                    }
+
+                                    if (indexSku != _oldSkuData.length) {
+                                        arr2.push(collectList[i])
+                                    }
+                                }
+                            }
+                        }
+                        app.methods.deleteCollectList(arr, arr2)
+
+                        // 确定方案
+                        $$("#product-submit").off().on("click", function (e) {
+                            var maxNum = app.data.checkPlan.quantity * (app.data.checkPlan.planNum ? app.data.checkPlan.planNum : 1)
+                            var skuNum = 0;
+                            var check = cacheLocalstorage.getCache('collectCheck1120') || {}
+
+                            for (var i = 0; i < app.data.checkSku.length; i++) {
+                                skuNum += app.data.checkSku[i].num
+                            }
+                            if (skuNum == maxNum) {
+                                var obj = {
+                                    hide: false,
+                                    plan: app.data.checkPlan,
+                                    skuList: app.data.checkSku,
+                                    product: app.data.productInfo
+                                }
+                                app.data.collectListPlan[app.data.productInfo.dateId] = obj
+                                check[app.data.productInfo.dateId] = true
+                                cacheLocalstorage.setCache('collectListPlan1120', app.data.collectListPlan)
+                                cacheLocalstorage.setCache('collectCheck1120', check)
+                                app.methods.initCheckIcon()
+                                app.methods.initProdutList()
+                                app.methods.closeCartDialog()
+                                app.methods.initShoppingCart()
+                            } else {
+                                mdui.snackbar({ message: '請檢查商品數量！', position: 'top' });
+                            }
+                        })
+
+                    },
+                    complete: function (xhr, textStatus) { tools.hideLoading(); },
+                    error: function (xhr, textStatus) { }
+                });
+            },
+            deleteCollectList: function (data, data1) {
+                var collectList = cacheLocalstorage.getCache('collectList1120') || []
+                var collectListPlan = cacheLocalstorage.getCache('collectListPlan1120') || {}
+                var collectCheck = cacheLocalstorage.getCache('collectCheck1120') || {}
+                for (var i = 0; i < data.length; i++) {
+                    delete collectListPlan[data[i]]
+                    delete collectCheck[data[i]]
+                }
+                var arr = []
+                for (var i = 0; i < collectList.length; i++) {
+                    var lock = true
+                    for (var x = 0; x < data.length; x++) {
+                        if (collectList[i] == data[x]) {
+                            lock = false
+                        }
+                    }
+                    if (lock) {
+                        arr.push(collectList[i])
+                    }
+                }
+                for (var i = 0; i < data1.length; i++) {
+                    delete collectListPlan[data1[i]]
+                    delete collectCheck[data1[i]]
+                }
+                if (data.length > 0) {
+                    mdui.snackbar({ message: '您加购的商品数据变化，已为您清除！请重新加购', position: 'top', timeout: 2000 });
+                }
+                app.data.collectListPlan = collectListPlan
+                cacheLocalstorage.setCache('collectList1120', arr)
+                cacheLocalstorage.setCache('collectListPlan1120', collectListPlan)
+                cacheLocalstorage.setCache('collectCheck1120', collectCheck)
+                setTimeout(function () {
+                    app.methods.goCartList()
+                      // 无收藏
+                    if (arr.length == 0) {
+                        $$('.empty-carts').show()
+                    } else {
+                        $$('.empty-carts').hide()
+                    }
+                    app.methods.initShoppingCart()
+                }, 100)
+                
+            },
+            goCartList: function () {
+
+                var collectList = cacheLocalstorage.getCache('collectList1120') || [];
+                var _rightWidth = document.body.clientWidth - 40 - 32 - 80 - 13
+                var _rightWidth1 = document.body.clientWidth - 40 - 32 - 80 - 13 - 12 - 30
+                for (var i = 0; i < app.data.collectList.length; i++) {
+                    var imgIndex = -1
+                    if (app.data.collectList[i].productAttributes.length == 2) {
+                        imgIndex = app.data.collectList[i].productAttributes[0].productAttributeValues[0].productAttributeImageUrl ? 0 : 1
+                    }
+                    var collectHtml = '<div class="mdui-row pay-each animatedh" data-transx="0" style="background-color: #ffffff; border-radius: 8px;padding: 15px 10px 15px 12px;margin: 10px; ">'
+                        + '<div>'
+                        + '<div style="position: absolute; top:15px;bottom: 0;">'
+                        + '<div id="check-icon-' + collectList[i] + '" style="width:20px ;height: 20px; padding: 30px 12px  30px  0;float: left;"><img class="check-icon" src="https://d3o2c7bn83e5x8.cloudfront.net/image/icon_check.png" width="20px" height="20px"></div>'
+                        + '<div style="width:80px ;float: left;"><a href="../product/index.html?id=' + app.data.collectList[i].id + '"><img src=' + app.data.collectList[i].productImageUrl + ' width="80px" height="80px"></a></div>'
+                        + '<div style="position:absolute;bottom:12px; height:20px;" onclick="app.methods.deleteCollect(' + i + ')"><img src="https://d3o2c7bn83e5x8.cloudfront.net/image/icon/icon-del.png" height="15px" width="15px" style="margin-right:5px;vertical-align: middle"/><span style="line-height:15px;font-size:12px">删除</span></div>'
+                        + '</div>'
+                        + '<div style="padding-left:10px ;min-height:100px; float: right; width:' + _rightWidth + 'px";">'
+                        + '<div style="color:rgba(119,119,119,1);font-size:12px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">' + app.data.collectList[i].title + '</div>'
+                        + '<div id="select-plan-' + i + '" style="height:26px; background:rgba(255,255,255,1);border-radius:6px;line-height: 26px;color: #222222;padding:0 6px;margin-top: 6px;border:1px solid #bcbcbc;">'
+                        + '<div style="float: left; ">請選擇方案</div>'
+                        + '<div style="float: right;"><img src="https://d3o2c7bn83e5x8.cloudfront.net/image/icon/icon-right.png" width="7px"height="10px"></div>'
+                        + '</div>'
+                        + '<div id="select-plan-check-' + i + '" style="margin: 12px 0 10px 0;height: 14px; font-size: 14px;display:none">'
+                        + '<div style="float: left; ">方案：<span id="select-plan-text-' + i + '"></span></div>'
+                        + '<div style="float: right;margin-right:6px"><span id="select-plan-text-2-' + i + '"></span>  <img src="https://d3o2c7bn83e5x8.cloudfront.net/image/icon/icon-right.png" width="7px"height="10px"></div>'
+                        + '</div>'
+                        + '<div id="select-sku-check-list-' + i + '" style="float:left;width:' + _rightWidth + 'px; height:100%; overflow:hidden; margin:0 auto;">'
+                        + '<div id="select-sku-check-' + i + '"  style="display:none;float:left;background:rgba(249,249,249,1);border-radius:6px;padding: 8px 6px;color:#222222;font-size: 12px;line-height: 16px; width:' + _rightWidth1 + 'px">'
+                        + '<div style="float: left;" id="sku-list-check"></div></div>'
+                        + '<div id="select-sku-check-icon-' + i + '" style="display:none;height:100%; width:30px; overflow:hidden; padding-bottom:9999px; margin-bottom:-9999px; float:right;  background: rgb(249, 249, 249);">'
+                        + '<div style="position: absolute;top: 50%; right:16px ">  <img src="https://d3o2c7bn83e5x8.cloudfront.net/image/icon/icon-right.png" width="7px"height="10px" style="margin-left:7px"></div>'
+                        + '</div>'
+                        + '</div>'
+                        + '<div id="select-sku-num-check-' + i + '" style="float:left;margin-top:10px;color:#B4272D;display:none;pading-top: 10px;width:' + _rightWidth + 'px"><span style="font-size:12px">NT$</span><span id="select-sku-num-check-text1-' + i + '" style="font-size:16px"></span><span id="select-sku-num-check-text2-' + i + '" style="font-size:12px"></span></div>'
+                        + '<div id="select-sku-num-' + i + '" style="margin-top: 15px;width:' + _rightWidth + 'px";height: 30px;"><span style="font-size:12px;color:#B4272D">NT$</span><span style="font-size:14px;color:#B4272D">' + app.data.collectList[i].originalPrice + '</span></div>'
+                        + '</div>'
+                        + '</div>'
+                        + '<div class="pay-order-swiper">'
+                        + '<div class="btn-red pay-order-btn pay-order-del" onclick="app.methods.deleteCollect(' + i + ')"><img src="../image/icon-delete.png" />删除</div>'
+                        + '</div>'
+                        + '</div>'
+
+                    $$('#collect-list').append(collectHtml)
+                    // 滑动删除
+                    app.methods.touchmoveDelete()
+
+                    if (app.data.collectListPlan[collectList[i]]) {
+                        //方案替换
+                        var _oldData = app.data.collectListPlan[collectList[i]].plan
+                        var lock = true;
+                        var delLock = true
+                        for (var x = 0; x < app.data.collectList[i].saleStrategyList.length; x++) {
+                            if (app.data.collectList[i].saleStrategyList[x].id == _oldData.id) {
+                                delLock = false
+                                if (app.data.collectList[i].saleStrategyList[x].quantity == _oldData.quantity) {
+                                    var _data = app.data.collectList[i].saleStrategyList[x]
+                                    _data.planNum = _oldData.planNum ? _oldData.planNum : 1
+                                    for (k in app.data.collectList[i].saleStrategyList[x]) {
+                                        app.data.collectListPlan[collectList[i]].plan[k] = app.data.collectList[i].saleStrategyList[x][k]
+                                    }
+                                    $$("#select-plan-" + i).css("display", 'none')
+                                    $$("#select-plan-check-" + i).css("display", 'block')
+                                    $$("#select-plan-text-" + i).text("" + _data.quantity + "件入，NT$" + _data.totalPrice)
+                                    $$("#select-plan-text-2-" + i).text(_data.planNum ? "x" + _data.planNum : "x" + 1)
+                                    cacheLocalstorage.setCache('collectListPlan1120', app.data.collectListPlan)
+                                } else {
+                                    var check = cacheLocalstorage.getCache('collectCheck1120') || {}
+                                    lock = false
+                                    delete app.data.collectListPlan[collectList[i]]
+                                    if (check[collectList[i]]) {
+                                        delete check[collectList[i]]
+                                        cacheLocalstorage.setCache('collectCheck1120', check)
+                                    }
+                                    cacheLocalstorage.setCache('collectListPlan1120', app.data.collectListPlan)
+                                }
+                            }
+                        }
+                        if(delLock){
+                            var check = cacheLocalstorage.getCache('collectCheck1120') || {}
+                            lock = false
+                            delete app.data.collectListPlan[collectList[i]]
+                            if (check[collectList[i]]) {
+                                delete check[collectList[i]]
+                                cacheLocalstorage.setCache('collectCheck1120', check)
+                            }
+                            cacheLocalstorage.setCache('collectListPlan1120', app.data.collectListPlan)
+                        }
+
+
+
+                        //方案數量無變化
+                        if (lock) {
+                            var _oldSkuData = app.data.collectListPlan[collectList[i]].skuList
+                            var indexSku = 0
+                            for (var y = 0; y < _oldSkuData.length; y++) {
+                                for (var x = 0; x < app.data.collectList[i].productSkus.length; x++) {
+
+                                    if ((_oldSkuData[y].id == app.data.collectList[i].productSkus[x].id) && (app.data.collectList[i].productSkus[x].inventory >= _oldSkuData[y].num)) {
+                                        indexSku++
+                                        for (var k in app.data.collectList[i].productSkus[x][k]) {
+                                            app.data.collectListPlan[collectList[i]].skuList[y][k] = app.data.collectList[i].productSkus[x][k]
+                                        }
+                                    }
+                                }
+                            }
+
+                            if (_oldSkuData.length == indexSku) {
+                                var _plan = app.data.collectListPlan[collectList[i]].plan
+                                var totalPrice = _plan.totalPrice
+                                var planNum = _plan.planNum ? _plan.planNum : 1
+
+                                $$("#select-sku-num-" + i).css("display", 'none')
+                                $$("#select-sku-num-check-" + i).css("display", 'block')
+                                var allNum = totalPrice * planNum
+                                var nowNum = app.data.collectList[i].originalPrice * planNum * _plan.quantity - allNum
+                                $$("#select-sku-num-check-text1-" + i).text(allNum)
+                                $$("#select-sku-num-check-text2-" + i).text("(現省NT$" + nowNum + ")")
+                                if (imgIndex != -1) {
+                                    var skuObj = {}
+                                    for (var x = 0; x < app.data.collectListPlan[collectList[i]].skuList.length; x++) {
+                                        var isData = app.data.collectListPlan[collectList[i]].skuList[x]
+                                        var num = isData.num
+                                        var value1 = isData["productAttributeValue" + (imgIndex == 1 ? 2 : 1)]
+                                        var value2 = isData["productAttributeValue" + (imgIndex == 1 ? 1 : 2)]
+                                        if (!skuObj[value1]) {
+                                            skuObj[value1] = {
+                                                text: ""
+                                            }
+                                        }
+                                        skuObj[value1].text += "&nbsp;" + value2 + "x" + num + "&nbsp;&nbsp;"
+                                    }
+                                    var skuCheckHtml = ""
+                                    for (var k in skuObj) {
+                                        skuCheckHtml += '<div style="line-height:18px">' + k + ":" + skuObj[k].text + '</div>'
+                                    }
+                                    $$("#select-sku-check-" + i).html(skuCheckHtml)
+                                } else {
+                                    var skuCheckHtml = ""
+                                    for (var x = 0; x < app.data.collectListPlan[collectList[i]].skuList.length; x++) {
+                                        var isData = app.data.collectListPlan[collectList[i]].skuList[x]
+                                        skuCheckHtml += '<div style="float:left;margin-left:5px;line-height:18px">' + isData.productAttributeValue1 + "x" + isData.num + '</div>'
+                                    }
+                                    $$("#select-sku-check-" + i).html(skuCheckHtml)
+
+                                }
+
+                                $$("#select-sku-check-" + i).css("display", 'block')
+                                $$("#select-sku-check-icon-" + i).css("display", 'block')
+
+                            } else {
+                                //如果SKU有变动，则清空已选SKU
+                                var check = cacheLocalstorage.getCache('collectCheck1120') || {}
+                                delete app.data.collectListPlan[collectList[i]]
+                                if (check[collectList[i]]) {
+                                    delete check[collectList[i]]
+                                    cacheLocalstorage.setCache('collectCheck1120', check)
+                                }
+                                $$("#select-sku-check-" + i).css("display", 'none')
+                                $$("#select-sku-check-icon-" + i).css("display", 'none')
+                                $$("#select-sku-num-" + i).css("display", 'block')
+                                $$("#select-sku-num-check" + i).css("display", 'none')
+                                delete app.data.collectListPlan[collectList[i]]
+                                cacheLocalstorage.setCache('collectListPlan1120', app.data.collectListPlan)
+                            }
+                        }
+                    } else {
+                        $$("#select-plan-" + i).css("display", 'block')
+                        $$("#select-plan-check-" + i).css("display", 'none')
+                        $$("#select-plan-text-" + i).text("")
+                        $$("#select-plan-text-2-" + i).text("")
+                    }
+
+                    // 选择方案（未选）
+                    $$("#select-plan-" + i).off().on("click", function () {
+                        var _index = $$(this)[0].id.split("select-plan-").join("")
+                        var planDialogHtml = '  <div style="width:100%" >' +
+                            '<div style="width: 100%; float:left">'
+                            + '<div style="color:#222222;font-size:18px;font-weight: 500; float: left;line-height:36px">請選擇方案</div>'
+                            + '  <div style="float:right" style="padding-right:0;">' +
+                            '      <button class="mdui-btn mdui-btn-icon" onclick="app.methods.closePlanAllBox();"><img src="https://d3o2c7bn83e5x8.cloudfront.net/image/icon/icon-close2.png" class="close-pub"></button>' +
+                            '  </div></div>'
+                            + '<div class="mdui-row" style="color: #777777; font-size: 14px;">原價：NT$' + app.data.collectList[_index].originalPrice + '</div>'
+
+                        $$('#plan-all-box-head').html(planDialogHtml);
+
+                        app.methods.initSaleStrategy(_index)
+                        app.methods.openPlanBox()
+                    })
+
+                    // 选择方案（已选）
+                    $$("#select-plan-check-" + i).off().on("click", function () {
+                        var _index = $$(this)[0].id.split("select-plan-check-").join("")
+                        var planDialogHtml = '  <div style="width:100%" >' +
+                            '<div style="width: 100%; float:left">'
+                            + '<div style="color:#222222;font-size:18px;font-weight: 500; float: left;line-height:36px">請選擇方案</div>'
+                            + '  <div style="float:right" style="padding-right:0;">' +
+                            '      <button class="mdui-btn mdui-btn-icon" onclick="app.methods.closePlanAllBox();"><img src="https://d3o2c7bn83e5x8.cloudfront.net/image/icon/icon-close2.png" class="close-pub"></button>' +
+                            '  </div></div>'
+                            + '<div class="mdui-row" style="color: #777777; font-size: 14px;">原價：NT$' + app.data.collectList[_index].originalPrice + '</div>'
+
+                        $$('#plan-all-box-head').html(planDialogHtml);
+
+                        app.methods.initSaleStrategy(_index)
+                        app.methods.openPlanBox()
+                    })
+
+
+
+                    $$('#select-sku-check-list-' + i).off().on('click', function () {
+                        var _index = $$(this)[0].id.split('select-sku-check-list-').join('')
+                        var collectList = cacheLocalstorage.getCache('collectList1120') || [];
+                        var collectListPlan = cacheLocalstorage.getCache('collectListPlan1120') || {};
+
+
+                        app.data.productInfo = app.data.collectList[_index]
+                        app.data.productInfo.dateId = collectList[_index]
+                        app.data.checkPlan = collectListPlan[collectList[_index]].plan
+                        app.data.checkSku = []
+                        var cartDialogHtml = '  <div style="width:100%" >' +
+                            '<div style="width: 100%; float:left">'
+                            + '<div style="color:#222222;font-size:18px;font-weight: 500; float: left;line-height:30px">請選擇規格</div>'
+                            + '<div style="color:#B4272D;font-size:18px;font-weight: 500;float: left; margin-left: 8px;line-height:30px">'
+                            + '</span>單價<span style="font-size:14px ;">NT$</span><span id="one-price"></span></div>'
+                            + '  <div style="float:right" style="padding-right:0;">' +
+                            '      <button class="mdui-btn mdui-btn-icon" onclick="app.methods.closeCartDialog();"><img src="https://d3o2c7bn83e5x8.cloudfront.net/image/icon/icon-close2.png" class="close-pub"></button>' +
+                            '  </div>'
+
+                        $$('#cartDialog-head').html(cartDialogHtml);
+                        app.methods.openCartDialog('confirmSelected');
+                        $$("#show-all-num-all").text(app.data.checkPlan.quantity)
+                        $$("#one-price").text(collectListPlan[collectList[_index]].plan.price)
+                        app.methods.initPlanSku()
+                    })
+
+                    // 选中
+                    $$("#check-icon-" + collectList[i]).off().on("click", function () {
+                        var _id = $$(this)[0].id.split("check-icon-").join("")
+                        var check = cacheLocalstorage.getCache('collectCheck1120') || {}
+                        var plan = cacheLocalstorage.getCache('collectListPlan1120') || {}
+                        if (check[_id]) {
+                            delete check[_id]
+                            cacheLocalstorage.setCache('collectCheck1120', check)
+                            app.methods.initCheckIcon()
+                        } else {
+                            if (plan[_id]) {
+                                check[_id] = true
+                                cacheLocalstorage.setCache('collectCheck1120', check)
+                                app.methods.initCheckIcon()
+                            } else {
+                                for (var i = 0; i < app.data.collectList.length; i++) {
+                                    if (collectList[i] == _id) {
+                                        $$('#select-plan-' + i).trigger("click");
+                                    }
+                                }
+                            }
+                        }
+
+                    })
+
+
+
+
+
+                }
+                app.methods.initCheckIcon()
+
+            },
+
+            // 解決安卓低版本facebook瀏覽器會遮住底部的問題
+            androidFbbrower: function () {
+                // if (app.data.pinto == 'true') {
+                //         $$('.mdui-bottom-nav-menu').hide()
+                //         $$('.mdui-bottom-nav').eq(0).hide
+                //         $$('.mdui-bottom-nav').eq(0).css({ bottom: 0 })
+                //         $$(".mdui-center").css("padding-right", "50px")
+                //         $$('.mdui-toolbar-title .top-left-options').addClass('noNav')
+                
+                // }
+                if (tools.getPlatform() == 'Android' && tools.getBrowerForm() == 'FB') {
+                    $$('.cartDialog').css({
+                        'padding-bottom': '50px'
+                    })
+                    $$('.plan-all-box').css({
+                        'padding-bottom': '50px'
+                    })
+                    if (app.data.pinto == 'true') {
+                        $$('.mdui-bottom-nav-menu').hide()
+                        $$('.mdui-bottom-nav').eq(0).css({ bottom: 0 })
+                        $$(".mdui-center").css("padding-right", "50px")
+                        $$('.mdui-toolbar-title .top-left-options').addClass('noNav')
+                
+                    }else{
+                        $$('.mdui-bottom-nav').eq(0).css({ bottom: 50 })
+                        $$('.mdui-bottom-nav').css({
+						    'padding-bottom': '50px'
+					    })
+                        $$('.mdui-container-fluid').css({
+                            'margin-bottom': '50px'
+                        })
+                        
+                        $$('#collect-list').css({'padding-bottom': '50px'})
+                        $$('#all-plan-box').css({'bottom': '100px'})
+                    }
+                    
+                }else if(tools.getPlatform() == 'IOS' && tools.getBrowerForm() == 'FB'){
+                    if(tools.getURLParam('pinto')){
+                        $$('#all-plan-box').css({
+                            'padding-bottom': '20px'
+                        })
+                    }
+
+                }else{
+                    if (app.data.pinto == 'true') {
+                        $$('.mdui-bottom-nav').eq(0).hide()
+                        $$('.mdui-bottom-nav').eq(0).css({ bottom: 0 })
+                        $$(".mdui-center").css("padding-right", "50px")
+                        $$('.mdui-toolbar-title .top-left-options').addClass('noNav')
+                        $$('#all-plan-box').css({'bottom': '0'})
+                    }
+                
+                }
+            },
+            initCheckIcon: function () {
+                // 判断入口是否是广告页
+                var pixelId = cacheSessionStorage.getCache('pixelId')
+                var productId = cacheSessionStorage.getCache('productId')
+                var affiliate = cacheSessionStorage.getCache('affiliate')
+                var check = cacheLocalstorage.getCache('collectCheck1120') || {}
+                var planObj = cacheLocalstorage.getCache('collectListPlan1120') || {}
+                var collectList = cacheLocalstorage.getCache('collectList1120') || {}
+                var allNum = 0
+                var allProductNum = 0
+                var allPrice = 0
+                var nowPrice = 0
+                for (var i = 0; i < collectList.length; i++) {
+                    if (check[collectList[i]]) {
+                        var _id = collectList[i]
+                        var planNum = planObj[_id].plan.planNum
+                        var num = planObj[_id].plan.quantity
+                        var totalPrice = planObj[_id].plan.totalPrice
+                        allNum++
+                        allProductNum += planNum * num
+                        allPrice += app.data.collectList[i].originalPrice * planNum * num
+                        nowPrice += planNum * totalPrice
+                        $$("#check-icon-" + collectList[i]).html('<img class="check-icon" src="https://d3o2c7bn83e5x8.cloudfront.net/image/icon_check.png" width="20px" height="20px">')
+                    } else {
+                        $$("#check-icon-" + collectList[i]).html('<img class="check-icon" src="https://d3o2c7bn83e5x8.cloudfront.net/image/icon_no_check.png" width="20px" height="20px">')
+
+                    }
+                }
+                
+
+                if (allNum > 0) {
+                    $$("#all-plan-box").css("display", "block")
+                    // $$('.mdui-bottom-nav-fixed').css({
+                    //     'padding-bottom': 100 + 'px',
+                    // })
+                    $$(".all-plan-num").text(allNum)
+                    $$(".all-plan-price").text(nowPrice)
+                    $$(".all-plan-now").text(allPrice - nowPrice)
+
+                    // 结算
+                    $$(".all-plan-submit").off().on("click", function () {
+                        var planDataList = []
+                        for (var k in planObj) {
+
+                            if (check[k]) {
+                                if (pixelId && affiliate) {
+                                    for (const i in planObj[k].skuList) {
+                                        planObj[k].skuList[i].sourceAffiliateProductId = productId
+                                        planObj[k].skuList[i].sourceAffiliate = affiliate
+                                    }
+                                }
+                                var obj = {
+                                    plan: planObj[k].plan,
+                                    product: {},
+                                    skuList: planObj[k].skuList
+                                }
+                                for (var y = 0; y < app.data.collectList.length; y++) {
+                                    if (app.data.collectList[y].id == k.split("-")[0]) {
+                                        obj.product = app.data.collectList[y]
+                                    }
+                                }
+                                planDataList.unshift(obj)
+                            }
+                        }
+
+                        // 提交至结算页
+                        // 杜克
+                        setCache("dataCachePlan1120", planDataList)
+                        window.location.href = '../shopcart/cart.html'
+                    })
+
+                    // 查看已选
+                    $$("#show-detail").off().on('click', function () {
+                        var _index = $$(this)[0].id.split("select-plan-").join("")
+                        var planDetailHtml = '  <div style="width:100%" >' +
+                            '<div style="width: 100%; float:left">'
+                            + '<div style="color:#222222;font-size:18px;font-weight: 500; float: left;line-height:36px">已选' + allNum + '款，共' + allProductNum + '件商品</div>'
+                            + '  <div style="float:right" style="padding-right:0;">' +
+                            '      <button class="mdui-btn mdui-btn-icon" onclick="app.methods.closePlanDetail();"><img src="https://d3o2c7bn83e5x8.cloudfront.net/image/icon/icon-close2.png" class="close-pub"></button>' +
+                            '  </div></div>'
+                        $$('#plan-detail-head').html(planDetailHtml);
+
+
+                        var planDetailListHtml = ""
+                        var _rightWidth = window.screen.width - 90 + "px"
+                        for (var i = 0; i < collectList.length; i++) {
+                            if (check[collectList[i]]) {
+                                var imgIndex = -1
+                                var listHtml = ""
+                                if (app.data.collectList[i].productAttributes.length == 2) {
+                                    imgIndex = app.data.collectList[i].productAttributes[0].productAttributeValues[0].productAttributeImageUrl ? 0 : 1
+                                }
+                                var planNum = planObj[collectList[i]].plan.planNum
+                                var num = planObj[collectList[i]].plan.quantity
+                                listHtml += '<div style="margin: 8px 0;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 1;overflow: hidden;color:#777777">' + planNum * num + '件：' + app.data.collectList[i].title + '</div><div style="height: 1px; border-top: 1px dashed; color:#EDEDED;margin-bottom: 11px;"></div>'
+
+                                if (imgIndex != -1) {
+                                    var skuObj = {}
+                                    for (var x = 0; x < app.data.collectListPlan[collectList[i]].skuList.length; x++) {
+                                        var isData = app.data.collectListPlan[collectList[i]].skuList[x]
+                                        var num = isData.num
+                                        var value1 = isData["productAttributeValue" + (imgIndex == 1 ? 2 : 1)]
+                                        var value2 = isData["productAttributeValue" + (imgIndex == 1 ? 1 : 2)]
+                                        if (!skuObj[value1]) {
+                                            skuObj[value1] = {
+                                                text: "",
+                                                num: 0,
+                                                img: "",
+                                            }
+                                        }
+
+                                        skuObj[value1].text += "&nbsp" + value2 + "x" + num + "&nbsp&nbsp"
+                                        skuObj[value1].num += num
+                                        skuObj[value1].img = isData.productImageUrl
+                                    }
+
+                                    for (var k in skuObj) {
+                                        listHtml += '<div class="mdui-row" style="margin-bottom:15px"><div style="float:left;width: 50px;"><img src="' + skuObj[k].img + '" width="50px" height="50px" alt=""></div><div style="float: left;margin-left: 8px; width:' + _rightWidth + ' "><div style="color:#777777;margin-bottom: 6px;">' + k + ' (' + skuObj[k].num + ')</div><div style="color:#222222;  background-color: #f9f9f9; border-radius:6px;padding: 6px; font-size: 14px;">' + skuObj[k].text + '</div></div></div>'
+                                    }
+                                } else {
+                                    for (var x = 0; x < app.data.collectListPlan[collectList[i]].skuList.length; x++) {
+                                        var isData = app.data.collectListPlan[collectList[i]].skuList[x]
+                                        listHtml += '<div class="mdui-row" style="margin-bottom:15px"><div style="float:left;width: 50px;"><img src="' + isData.productImageUrl + '" width="50px" height="50px" alt=""></div><div style="float: left;margin-left: 8px; width:' + _rightWidth + '"><div style="color:#222222;  background-color: #f9f9f9; border-radius:6px;padding: 6px; font-size: 14px; margin-top:11px">' + isData.productAttributeValue1 + "x" + isData.num + '</div></div></div>'
+                                    }
+                                }
+                                planDetailListHtml += listHtml
+                            }
+
+                        }
+                        $$('#plan-detail-list').html(planDetailListHtml)
+
+
+                        app.methods.openPlanDetail()
+                    })
+                } else {
+                    $$("#all-plan-box").css("display", "none")
+                    $$('.mdui-bottom-nav-fixed').css({
+                        'padding-bottom': 50 + 'px',
+                    })
+                }
+            },
+
+            // 重新选择方案
+            initSaleStrategy: function (collectIndex) {
+                var collectList = cacheLocalstorage.getCache('collectList1120') || [];
+                var SaleStrategyHtml = "";
+                var planHtml = ""
+                var minIndex = 0;
+                var minPrice = 0;
+                var planNum = 0
+                var lock = false;
+                // 初始化赋值
+                app.data.productInfo = app.data.collectList[collectIndex]
+                app.data.productInfo.dateId = collectList[collectIndex]
+                if (app.data.collectListPlan[app.data.productInfo.id]) {
+                    planNum = app.data.collectListPlan[app.data.productInfo.id].plan.planNum
+                    lock = true
+                    app.data.checkPlan = app.data.collectListPlan[app.data.productInfo.id].plan
+                    app.data.checkSku = []
+                } else {
+                    planNum = 1
+                    app.data.checkPlan = {}
+                    app.data.checkSku = []
+                }
+                for (var i = 0; i < app.data.productInfo.saleStrategyList.length; i++) {
+                    var _data = app.data.productInfo.saleStrategyList[i];
+                    var index = i + 1;
+                    var discount = _data.discount >= 10 ? '' : '  (' + _data.discount + '折)'
+                    if (minPrice == 0 || app.data.productInfo.saleStrategyList[i].price < minPrice) {
+                        minPrice = app.data.productInfo.saleStrategyList[i].price
+                        minIndex = i
+                    }
+
+                    SaleStrategyHtml += '<tr><td style="padding:0"><div>方案' + index + '</div></td><td><div style="float: left;"><div style="color:#777777;">' + _data.quantity + '件入,售價NT$' + _data.totalPrice + '</div><div style="color:#ED1B2E;">均價NT$' + _data.price + discount + '</div></div>'
+                        + '<div id="plan-index-' + i + '" style="float: right; border-radius: 6px; background-color: #ED1B2E; width: 70px;height: 30px; color:#ffffff;text-align: center; line-height: 30px; margin-top: 10px;">去購買</div></td></tr>'
+
+                    planHtml += '<div id="plan-type-' + i + '" class="no-check-plan" ><div class="mdui-row"><div class="mdui-col-xs-9"><div style="font-size:16px; line-height: 26px; margin-left: 12px;">'
+                        + _data.quantity + '件入，售價NT$' + _data.totalPrice + '</div>'
+
+                        + '<div style="font-size:14px; color:#ED1B2E;line-height: 26px; margin-left: 12px;">'
+                        + '均價NT$' + _data.price + '</div></div><div class="mdui-col-xs-3" style="font-size:16px; line-height: 52px; text-align: left"> (' + _data.discount + '折)</div></div></div>'
+
+                }
+                $$('#arrival-list').html(SaleStrategyHtml)
+                $$('#plan-model').html(planHtml)
+                $$('#plan-type-' + minIndex + '').append('<div style="position:relative;top:-68px;width:84px;height:18px;background:rgba(255,255,255,1);border-radius:9px;border:1px solid rgba(237,27,46,1);line-height:18px"><div style="color:#ED1B2E;font-size:11px;padding-left:5px;line-height:18px">🔥單件最超值</div></div>')
+                $$("#plan-num-text").text(planNum)
+
+                var planIndex = 0
+                for (var i = 0; i < app.data.productInfo.saleStrategyList.length; i++) {
+                    if (lock && app.data.checkPlan.id == app.data.productInfo.saleStrategyList[i].id) {
+                        planIndex = i
+                    }
+                    $$("#plan-index-" + i).off().on("click", function (e) {
+                        var _index = $$(this)[0].id.split("plan-index-").join("")
+                        app.methods.openCartDialog('confirmSelected');
+                        app.data.checkPlan = app.data.productInfo.saleStrategyList[_index]
+                        $$("#show-all-num-all").text(app.data.productInfo.saleStrategyList[_index].quantity)
+                        $$("#one-price").text(app.data.productInfo.saleStrategyList[_index].price)
+                    })
+
+                    // 选择方案
+                    $$("#plan-type-" + i).off().on("click", function (e) {
+                        var _index = $$(this)[0].id.split("plan-type-").join("")
+                        var _num = parseInt($$("#plan-num-text").text())
+                        for (var x = 0; x < app.data.productInfo.saleStrategyList.length; x++) {
+                            if (x == _index) {
+                                $$("#plan-type-" + x).removeClass("no-check-plan")
+                                $$("#plan-type-" + x).addClass("check-plan")
+                                app.data.checkPlan = app.data.productInfo.saleStrategyList[x]
+                                var nowPrice = app.data.checkPlan.quantity * _num * app.data.checkPlan.price
+                                var originalPrice = app.data.productInfo.saleStrategyList[x].quantity * _num * app.data.productInfo.originalPrice - nowPrice
+                                $$("#plan-now").text(app.data.productInfo.saleStrategyList[x].quantity * _num * app.data.productInfo.saleStrategyList[x].price)
+                                $$("#plan-economize").text('（現省NT$' + originalPrice + ')')
+                            } else {
+                                $$("#plan-type-" + x).removeClass("check-plan")
+                                $$("#plan-type-" + x).addClass("no-check-plan")
+                            }
+                        }
+                    })
+                }
+
+                // 初始选择方案
+                if (lock) {
+                    $$('#plan-type-' + planIndex).trigger("click");
+                } else {
+                    // $$('#plan-type-0').trigger("click");
+                    $$("#plan-now").text(0)
+                    $$("#plan-economize").text("")
+                    $$("#plan-num-text").text(1)
+                }
+
+                // 方案数量减少
+                $$("#plan-num-del").off().on("click", function (e) {
+                    var _num = parseInt($$("#plan-num-text").text())
+                    if (_num > 1) {
+                        _num--
+                    }
+                    $$("#plan-num-text").text(_num)
+                    var nowPrice = 0
+                    var originalPrice = 0
+                    if (app.data.checkPlan.quantity && app.data.checkPlan.price) {
+                        nowPrice = app.data.checkPlan.quantity * _num * app.data.checkPlan.price
+                        originalPrice = app.data.checkPlan.quantity * _num * app.data.productInfo.originalPrice - nowPrice
+                    }
+                    if (app.data.checkPlan && app.data.checkPlan.price) {
+                        $$("#plan-now").text(nowPrice)
+                        $$("#plan-economize").text('（現省NT$' + originalPrice + ')')
+                    }
+                })
+
+                // 方案数量增加
+                $$("#plan-num-add").off().on("click", function (e) {
+                    var _num = parseInt($$("#plan-num-text").text())
+                    _num++
+                    $$("#plan-num-text").text(_num)
+                    var nowPrice = 0
+                    var originalPrice = 0
+                    if (app.data.checkPlan.quantity && app.data.checkPlan.price) {
+                        nowPrice = app.data.checkPlan.quantity * _num * app.data.checkPlan.price
+                        originalPrice = app.data.checkPlan.quantity * _num * app.data.productInfo.originalPrice - nowPrice
+                    }
+                    if (app.data.checkPlan && app.data.checkPlan.price) {
+                        $$("#plan-now").text(nowPrice)
+                        $$("#plan-economize").text('（現省NT$' + originalPrice + ')')
+                    }
+                })
+
+                // 下一步
+                $$("#plan-submit").off().on("click", function (e) {
+                    var _num = parseInt($$("#plan-num-text").text())
+                    if ($$(".check-plan").length > 0) {
+                        var _index = $$(".check-plan")[0].id.split("plan-type-").join("")
+                        app.data.checkPlan = app.data.productInfo.saleStrategyList[_index]
+                        app.data.checkPlan.planNum = _num
+                        app.methods.closePlanAllBox()
+                        var cartDialogHtml = '  <div style="width:100%" >' +
+                            '<div style="width: 100%; float:left">'
+                            + '<div style="color:#222222;font-size:18px;font-weight: 500; float: left;line-height:30px">請選擇規格</div>'
+                            + '<div style="color:#B4272D;font-size:18px;font-weight: 500;float: left; margin-left: 8px;line-height:30px">'
+                            + '</span>單價<span style="font-size:14px ;">NT$</span><span id="one-price"></span></div>'
+                            + '  <div style="float:right" style="padding-right:0;">' +
+                            '      <button class="mdui-btn mdui-btn-icon" onclick="app.methods.closeCartDialog();"><img src="https://d3o2c7bn83e5x8.cloudfront.net/image/icon/icon-close2.png" class="close-pub"></button>' +
+                            '  </div>'
+
+                        $$('#cartDialog-head').html(cartDialogHtml);
+                        app.methods.openCartDialog('confirmSelected');
+                        $$("#show-all-num-all").text(app.data.productInfo.saleStrategyList[_index].quantity * _num)
+                        $$("#one-price").text(app.data.productInfo.saleStrategyList[_index].price)
+                        app.methods.initPlanSku()
+
+
+                    } else {
+                        mdui.snackbar({ message: '請選擇方案！', position: 'top' });
+                    }
+                })
+
+
+            },
+
+            closePlanAllBox: function () {
+                $$.hideOverlay();
+                $$('.plan-all-box').hide();
+                app.methods.looseBody();
+            },
+
+            closePlanDetail: function () {
+                $$.hideOverlay();
+                $$('.plan-detail').hide();
+                app.methods.looseBody();
+
+            },
+            initShoppingCart: function () {
+                var shoppingCartDom = $$('.shop_cart_num'),
+                    shoppingcartNum = tools.getShopCartProductsNum();
+                if (shoppingcartNum == 0) {
+                    shoppingCartDom.hide();
+                } else {
+                    shoppingCartDom.html(shoppingcartNum).show();
+                }
+            },
+
+            openPlanDetail: function (type) {
+                var $cartDialog = $$('.plan-detail');
+
+                $$.showOverlay(2000);
+
+                $cartDialog.show();
+
+                app.methods.fixedBody();
+
+                var height = document.documentElement.clientHeight * 0.7 - 60
+                $$('.plan-detail .product-prams-box').css({
+                    'max-height': height + 'px',
+                    'height': height + 'px',
+                })
+
+            },
+
+            openCartDialog: function (type) {
+                var $cartDialog = $$('.cartDialog');
+
+                $$.showOverlay(2000);
+
+                $cartDialog.show();
+
+                app.methods.fixedBody();
+
+                var height = document.documentElement.clientHeight * 0.7 - 60
+                $$('.cartDialog .product-prams-box').css({
+                    'max-height': height + 'px',
+                    'height': height + 'px',
+                })
+            },
+
+            // 选择方案弹框
+            openPlanBox: function () {
+                var $planBox = $$('.plan-all-box');
+
+                $$.showOverlay(2000);
+
+                $planBox.show();
+
+                app.methods.fixedBody();
+
+                var height = document.documentElement.clientHeight * 0.7 - 85
+
+                $$('.plan-all-box .product-prams-box').css({
+                    'max-height': height + 'px',
+                    'height': height + 'px',
+                })
+            },
+            closeCartDialog: function () {
+                $$.hideOverlay();
+                $$('.cartDialog').hide();
+                app.methods.looseBody();
+            },
+            fixedBody: function () {
+                // var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+                // document.body.style.cssText += 'position:fixed;top:-' + scrollTop + 'px;';
+            },
+            looseBody: function () {
+                var body = document.body;
+                body.style.position = 'static';
+                var top = body.style.top;
+                document.body.scrollTop = document.documentElement.scrollTop = -parseInt(top);
+                body.style.top = '';
+            },
+
+            // 选择规格
+            initPlanSku: function () {
+                var data = app.data.productInfo.productAttributes
+                var productSkus = app.data.productInfo.productSkus
+                var skuHtml = ''
+                var index = data[0].productAttributeValues[0].productAttributeImageUrl ? 0 : 1
+                $$("#show-sku").css("display", "none")
+                $$("#show-sku-text").html("")
+                $$("#show-all-num-text").html(0)
+                app.data.selectSkuText = ""
+                if (data.length == 1) {
+                    for (var i = 0; i < productSkus.length; i++) {
+                        id = productSkus[i].code
+                        skuHtml += '<div class="mdui-row">'
+                            + '<div class="' + (productSkus[i].inventory > 0 ? '' : 'ban') + '" style="width: 100%;height: 48px;display: flex;">'
+                            + '<div style="display: flex;">'
+                            + '<img src="' + productSkus[i].productImageUrl + '" width="40px" height="40px" style="margin: auto;">'
+                            + '</div>'
+                            + '<div style="display: flex;flex: 1;margin-left: 10px;align-items: center;overflow: hidden;"><p style="overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">' + productSkus[i].name + '</p></div>'
+                            + '<div id="sku' + id + '" style="display: flex;">'
+                            + '<div id="' + id + '" class="ban-btn" style="width:40px;height:32px;border-radius:6px;border:1px solid #bcbcbc;margin: auto;">'
+                            + '<img src="' + (productSkus[i].inventory > 0 ? '../image/icon/icon-add-red.png' : '../image/icon/icon-add-grey.png') + '" width="10px"height="10px" style="margin:11px 15px 11px 15px ">'
+                            + '</div>'
+                            + '</div>'
+                            + '<div id="skuNum' + id + '" style="display:none">'
+                            + '<div style="margin: auto;height:32px;border-radius:6px;border:1px solid #bcbcbc;display: flex;">'
+                            + '<img id="del' + id + '" src="https://d3o2c7bn83e5x8.cloudfront.net/image/icon/icon-del-cart.png" width="10px"height="10px" style="padding:11px 11px 11px 15px;">'
+                            + '<input id="num' + id + '"  style="font-size: 16px;outline-style: none;border: 0px;width:44px;text-align:center" value="1"></input>'
+                            + '<img id="add' + id + '" src="https://d3o2c7bn83e5x8.cloudfront.net/image/icon/icon-add-cart.png" width="10px"height="10px" style="padding:11px 15px 11px 11px;">'
+                            + '</div>'
+                            + '</div>'
+                            + '</div>'
+                            + '</div>'
+                    }
+                    $$('#select-sku').html(skuHtml)
+                    for (var i = 0; i < productSkus.length; i++) {
+                        app.methods.addEventSku(productSkus[i].code)
+                    }
+                }
+
+                if (data.length == 2) {
+                    for (var i = 0; i < data[index].productAttributeValues.length; i++) {
+                        var text1 = ""
+                        var inventory // 库存
+                        skuHtml += '<div class="mdui-row" id="productAttributes-' + data[index].productAttributeValues[i].id + '" ><div style="width: 100%;height: 40px;line-height: 40px;"><div style="float: left;"><img src="' + data[index].productAttributeValues[i].productAttributeImageUrl + '" width="40px" height="40px"></div>'
+                            + '<div style="float: left;margin-left: 6px;">' + data[index].productAttributeValues[i].value + '<span id="text-' + data[index].productAttributeValues[i].id + '" style="color:#777777"></span></div><div style="float: right; margin-right: 8px;" id="img-' + data[index].productAttributeValues[i].id + '"><img src="https://d3o2c7bn83e5x8.cloudfront.net/image/icon/icon-up.png" width="10px" height="10px" style="color: #BCBCBC;vertical-align: middle"></div></div></div>'
+                            + '<div style="height:1px;background:rgba(237,237,237,1);margin-bottom:15px"></div>'
+                        for (var x = 0; x < data[index == 0 ? 1 : 0].productAttributeValues.length; x++) {
+                            var id = index == 0 ? "" + app.data.productInfo.id + '-' + data[0].productAttributeValues[i].id + '-' + data[1].productAttributeValues[x].id : "" + app.data.productInfo.id + '-' + data[0].productAttributeValues[x].id + '-' + data[1].productAttributeValues[i].id
+                            for (let j = 0; j < productSkus.length; j++) {
+                                if (id == productSkus[j].code) {
+                                    inventory = productSkus[j].inventory
+                                }
+                            }
+                            text1 += '<div class="' + (inventory > 0 ? '' : 'ban') + '" style="width: 100%; height: 40px; margin: 6px 0 6px 0; line-height: 40px;display: flex;justify-content: space-between;">'
+                                + '<div style="overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">' + data[index == 0 ? 1 : 0].productAttributeValues[x].value + '</div>'
+                                + '<div id="sku' + id + '" style="display: flex;">'
+                                + '<div id="' + id + '" class="ban-btn" style="width:40px;height:32px;border-radius:6px;border:1px solid #bcbcbc;margin: auto;">'
+                                + '<img src="' + (inventory > 0 ? '../image/icon/icon-add-red.png' : '../image/icon/icon-add-grey.png') + '" width="10px"height="10px" style="margin:11px 15px 11px 15px ">'
+                                + '</div>'
+                                + '</div>'
+                                + '<div id="skuNum' + id + '" style="display:none">'
+                                + '<div style="margin: auto;height:32px;border-radius:6px;border:1px solid #bcbcbc;display: flex;">'
+                                + '<img id="del' + id + '" src="https://d3o2c7bn83e5x8.cloudfront.net/image/icon/icon-del-cart.png" width="10px"height="10px" style="padding:11px 11px 11px 15px;">'
+                                + '<input id="num' + id + '"  style="font-size: 16px;outline-style: none;border: 0px;width:44px;text-align:center" value="1"></input>'
+                                + '<img id="add' + id + '" src="https://d3o2c7bn83e5x8.cloudfront.net/image/icon/icon-add-cart.png" width="10px"height="10px" style="padding:11px 15px 11px 11px;">'
+                                + '</div>'
+                                + '</div>'
+                                + '</div>'
+                        }
+                        skuHtml += '<div id="sku-list-' + data[index].productAttributeValues[i].id + '">' + text1 + '<div style="height:1px;background:rgba(237,237,237,1);margin-bottom:15px"></div></div>'
+                    }
+                    $$('#select-sku').html(skuHtml)
+                    for (var i = 0; i < data[index].productAttributeValues.length; i++) {
+
+                        var isId = "productAttributes-" + data[index].productAttributeValues[i].id
+
+                        // 自动展开第一项
+                        if (i == 0) {
+                            $$("#sku-list-" + data[index].productAttributeValues[i].id).css("display", "block")
+                            $$("#img-" + data[index].productAttributeValues[i].id).html('<img src="https://d3o2c7bn83e5x8.cloudfront.net/image/icon/icon-down.png" width="10px" height="10px" style="color: #BCBCBC;vertical-align: middle">')
+                        } else {
+                            $$("#sku-list-" + data[index].productAttributeValues[i].id).css("display", "none")
+                            $$("#img-" + data[index].productAttributeValues[i].id).html('<img src="https://d3o2c7bn83e5x8.cloudfront.net/image/icon/icon-up.png" width="10px" height="10px" style="color: #BCBCBC;vertical-align: middle">')
+                        }
+
+                        for (var x = 0; x < data[index == 0 ? 1 : 0].productAttributeValues.length; x++) {
+                            var id = index == 0 ? "" + app.data.productInfo.id + '-' + data[0].productAttributeValues[i].id + '-' + data[1].productAttributeValues[x].id : "" + app.data.productInfo.id + '-' + data[0].productAttributeValues[x].id + '-' + data[1].productAttributeValues[i].id
+                            app.methods.addEventSku(id)
+                        }
+                        // 批量添加点击事件
+                        $$("#" + isId).on("click", function (e) {
+                            for (var i = 0; i < data[index].productAttributeValues.length; i++) {
+                                if ("productAttributes-" + data[index].productAttributeValues[i].id == $$(this)[0].id) {
+                                    $$("#sku-list-" + data[index].productAttributeValues[i].id).css("display", "block")
+                                    $$("#img-" + data[index].productAttributeValues[i].id).html('<img src="https://d3o2c7bn83e5x8.cloudfront.net/image/icon/icon-down.png" width="10px" height="10px" style="color: #BCBCBC;vertical-align: middle">')
+                                } else {
+                                    $$("#sku-list-" + data[index].productAttributeValues[i].id).css("display", "none")
+                                    $$("#img-" + data[index].productAttributeValues[i].id).html('<img src="https://d3o2c7bn83e5x8.cloudfront.net/image/icon/icon-up.png" width="10px" height="10px" style="color: #BCBCBC;vertical-align: middle">')
+                                }
+                            }
+                        });
+                    }
+                }
+            },
+
+            addEventSku: function (id) {
+                var productSkus = app.data.productInfo.productSkus
+                var userAgent = navigator.userAgent;
+                if (userAgent.indexOf("iPhone") > -1) {
+                    $$("#num" + id).css({
+                        'width': '36px'
+                    })
+                }
+                if (userAgent.indexOf("Intel Mac OS") > -1) {
+                    $$("#num" + id).css({
+                        'width': '36px',
+                        'text-align': 'center'
+                    })
+                }
+                $$("#" + id).on("click", function (e) {
+                    var productSkus = app.data.productInfo.productSkus
+                    var _num = 0
+                    for (var y = 0; y < app.data.checkSku.length; y++) {
+                        _num += app.data.checkSku[y].num
+                    }
+                    var maxNum = app.data.checkPlan.quantity * (app.data.checkPlan.planNum ? app.data.checkPlan.planNum : 1)
+                    if (_num < maxNum) {
+                        var _id = $$(this)[0].id
+                        $$("#skuNum" + _id).css("display", "flex")
+                        $$("#sku" + _id).css("display", "none")
+                        for (y = 0; y < productSkus.length; y++) {
+                            if (_id == productSkus[y].code) {
+                                var _obj = productSkus[y];
+                                _obj.num = 1
+                                app.data.checkSku.push(_obj)
+                                $$("#num" + _id).val(1)
+                                app.methods.countNum(_id);
+                            }
+                        }
+                    } else {
+                        mdui.snackbar({ message: '已選滿' + maxNum + '件了喲～', position: 'top' });
+                    }
+                })
+                $$("#add" + id).on("click", function (e) {
+                    var _id = $$(this)[0].id.split("add").join("")
+                    var _y = null
+                    var _num = 0
+                    for (var y = 0; y < app.data.checkSku.length; y++) {
+                        if (_id == app.data.checkSku[y].code) {
+                            _y = y
+                        }
+                        _num += app.data.checkSku[y].num
+                    }
+                    var maxNum = app.data.checkPlan.quantity * (app.data.checkPlan.planNum ? app.data.checkPlan.planNum : 1)
+                    if (_num < maxNum) {
+                        if (_y != null && app.data.checkSku[_y].num < app.data.checkSku[_y].inventory) {
+                            app.data.checkSku[_y].num++
+                            $$("#num" + _id).val(app.data.checkSku[_y].num)
+                        } else {
+                            mdui.snackbar({ message: '該規格庫存不足，請選擇其他規格', position: 'top' });
+                        }
+                    } else {
+                        mdui.snackbar({ message: '已選滿' + maxNum + '件了喲～', position: 'top' });
+                    }
+
+                    app.methods.countNum(_id);
+                })
+
+                $$("#num" + id).on("change", function (e) {
+
+                    var val = $$(this).val() != "" ? parseInt($$(this).val()) : -1;
+                    var _id = $$(this)[0].id.split("num").join("")
+                    var _y = null
+                    var _num = 0
+                    var _isNme = 0
+                    for (var y = 0; y < app.data.checkSku.length; y++) {
+                        if (_id == app.data.checkSku[y].code) {
+                            _y = y
+                            _isNme = app.data.checkSku[y].num
+                        }
+                        _num += app.data.checkSku[y].num
+                    }
+                    if (val == -1) {
+                        $$("#num" + _id).val(_isNme)
+                    } else if (val == 0) {
+                        for (var y = 0; y < app.data.checkSku.length; y++) {
+                            if (_id == app.data.checkSku[y].code) {
+                                $$("#num" + _id).val(0)
+                                $$("#skuNum" + _id).css("display", "none")
+                                $$("#sku" + _id).css("display", "flex")
+                                if (app.data.checkSku.length > 1) {
+                                    app.data.checkSku.splice(y, 1)
+                                } else {
+                                    app.data.checkSku = []
+                                }
+                            }
+                        }
+                    } else {
+                        var maxNum = app.data.checkPlan.quantity * (app.data.checkPlan.planNum ? app.data.checkPlan.planNum : 1)
+                        if ((val - _isNme + _num) <= maxNum) {
+                            if (_y != null && app.data.checkSku[_y].num < app.data.checkSku[_y].inventory) {
+                                app.data.checkSku[_y].num = val
+                                $$("#num" + _id).val(val)
+                            } else {
+                                $$("#num" + _id).val(_isNme)
+                                mdui.snackbar({ message: '該規格庫存不足，請選擇其他規格', position: 'top' });
+                            }
+                        } else {
+                            var allMaxNum = maxNum - _num + _isNme
+                            $$("#num" + _id).val(allMaxNum)
+                            app.data.checkSku[_y].num = allMaxNum
+                            mdui.snackbar({ message: '您最多還可以加購' + allMaxNum + '個', position: 'top' });
+                        }
+                    }
+
+
+                    app.methods.countNum(_id);
+                })
+                $$("#del" + id).on("click", function (e) {
+                    var _id = $$(this)[0].id.split("del").join("")
+                    for (var y = 0; y < app.data.checkSku.length; y++) {
+                        if (_id == app.data.checkSku[y].code) {
+                            if (app.data.checkSku[y].num > 0) {
+                                app.data.checkSku[y].num--
+                                $$("#num" + _id).val(app.data.checkSku[y].num)
+                                if (app.data.checkSku[y].num == 0) {
+                                    $$("#skuNum" + _id).css("display", "none")
+                                    $$("#sku" + _id).css("display", "flex")
+                                    if (app.data.checkSku.length > 1) {
+                                        app.data.checkSku.splice(y, 1)
+                                    } else {
+                                        app.data.checkSku = []
+                                    }
+                                }
+
+                            }
+
+                        }
+                    }
+                    app.methods.countNum(_id);
+                })
+
+            },
+
+            countNum: function (id) {
+                var data = app.data.productInfo.productAttributes
+                var index = data[0].productAttributeValues[0].productAttributeImageUrl ? 1 : 2
+                var num = 0;
+                for (var i = 0; i < app.data.checkSku.length; i++) {
+                    if (app.data.checkSku[i].code.indexOf(id.split('-')[index]) != -1) {
+                        num += app.data.checkSku[i].num
+                    }
+                }
+                $$("#text-" + id.split('-')[index]).text(num > 0 ? "(" + num + ")" : "")
+                // show-sku
+                var textList = []
+                var allNum = 0
+                for (var i = 0; i < data[index - 1].productAttributeValues.length; i++) {
+                    var text = data[index - 1].productAttributeValues[i].value + ":"
+                    var lock = false;
+                    for (var x = 0; x < app.data.checkSku.length; x++) {
+                        if (app.data.checkSku[x].code.indexOf(data[index - 1].productAttributeValues[i].id) != -1) {
+                            lock = true
+                            if (app.data.productInfo.productAttributes.length > 1) {
+                                text += "  " + app.data.checkSku[x].name.split('/')[index == 2 ? 0 : 1].replace(/\s*/g, "") + "*" + app.data.checkSku[x].num
+                            } else {
+                                text = ""
+                                text += "" + app.data.checkSku[x].name + "*" + app.data.checkSku[x].num
+                            }
+
+                        }
+                        if (i == 0) {
+                            allNum += app.data.checkSku[x].num
+                        }
+                    }
+                    if (lock) {
+                        textList.push(text)
+                    }
+                }
+
+                var selectSkuText = ""
+                for (var i = 0; i < textList.length; i++) {
+                    if (app.data.productInfo.productAttributes.length > 1) {
+                        selectSkuText += '<div style="line-height: 20px;">' + textList[i] + '</div>'
+                    } else {
+                        selectSkuText += '<div style="line-height: 20px; float:left;margin-right:24px">' + textList[i] + '</div>'
+                    }
+
+                }
+                if (selectSkuText.replace(/\s*/g, "") != "") {
+                    if (app.data.selectSkuText.replace(/\s*/g, "") == "") {
+                        app.data.selectSkuText = selectSkuText
+                        $$("#show-sku").css("display", "block")
+                        var height = document.documentElement.clientHeight * 0.7 - 120
+                        $$('.cartDialog .product-prams-box').css({
+                            'max-height': height + 'px',
+                            'height': height + 'px',
+                        })
+                    }
+                } else {
+                    if (app.data.selectSkuText.replace(/\s*/g, "") != "") {
+                        app.data.selectSkuText = selectSkuText
+                        $$("#show-sku").css("display", "none")
+                        var height = document.documentElement.clientHeight * 0.7 - 60
+                        $$('.cartDialog .product-prams-box').css({
+                            'max-height': height + 'px',
+                            'height': height + 'px',
+                        })
+                    }
+                }
+
+                $$("#show-sku-text").css("width", window.screen.width - 72 + "px")
+                $$("#show-sku-text").html(selectSkuText)
+                $$("#show-all-num-text").html(allNum)
+            },
+
+            // 滑动删除
+            touchmoveDelete: function () {
+                function prevent_default(e) {
+                    // e.preventDefault();
+                }
+                function disable_scroll() {
+                    $(document).on('touchmove', prevent_default);
+                }
+                function enable_scroll() {
+                    $(document).off('touchmove', prevent_default);
+                }
+                //滑动删除
+                var Drags = {};
+                Drags.dragtag = false;//拖动状态
+                Drags.dragstart = true;//拖动开始标志
+                Drags.datatransx = 0;
+                Drags.Maxleft = -90;//最大向左滑动多少像素,这里是后面读者修改的。
+                $('.pay-list .pay-each').on('touchstart mousedown', function (e) {
+                    if (!($(e.target).hasClass("pay-order-swiper") || $(e.target).parents().hasClass("pay-order-swiper"))) {
+                        closeallswipe();     //点击还原
+                        if (e.originalEvent.targetTouches) {
+                            Drags.dragx = e.originalEvent.targetTouches[0].pageX;
+                            Drags.dragy = e.originalEvent.targetTouches[0].pageY;
+                        } else {
+                            Drags.dragx = e.pageX;
+                            Drags.dragy = e.pageY;
+                        }
+                        if ($(e.currentTarget).attr("data-transx")) {
+                            Drags.datatransx = parseInt($(e.currentTarget).attr("data-transx"));
+                        }
+                        Drags.dragtag = true;
+                        Drags.dragstart = true;
+                    }
+                }).on('touchmove mousemove', function (e) {
+                    if (Drags.dragtag) {
+                        $(e.currentTarget).removeClass('animatedh');
+                        $(e.currentTarget).addClass('dragstart');   //添加禁止选择
+                        var change = 0;
+                        if (e.originalEvent.targetTouches) {
+                            change = e.originalEvent.targetTouches[0].pageX - Drags.dragx;
+                            changey = e.originalEvent.targetTouches[0].pageY - Drags.dragy;
+                        } else {
+                            change = e.pageX - Drags.dragx;
+                            changey = e.pageY - Drags.dragy;
+                        }
+
+                        if (Drags.dragstart) {
+                            if (Math.abs(changey) < 20) {
+                                showswiperfbn();
+                            }
+                        } else {
+                            showswiperfbn();
+                        }
+                        function showswiperfbn() {
+                            if (Math.abs(change) > 20) {
+                                Drags.dragstart = false;
+                                if (change < -20) {
+                                    change = change + Drags.datatransx + 20;
+                                } else {
+                                    change = change + Drags.datatransx - 20;
+                                }
+                                change = Math.min(Math.max(Drags.Maxleft, change), 0);
+                                $(e.currentTarget).css('transform', 'translate3D(' + change + 'px,0px,0px)');
+                                $(e.currentTarget).attr("data-transx", change);
+                                disable_scroll();
+                            }
+                        }
+                    }
+                }).on('touchend mouseup', function (e) {
+                    var left = parseInt($(e.currentTarget).attr("data-transx"));
+                    var new_left;
+                    if ($(e.currentTarget).hasClass("open")) {
+                        if (left > -80) {
+                            new_left = 0;
+                            $(e.currentTarget).removeClass('open');
+                        } else {
+                            new_left = -90;
+                        }
+                    } else {
+                        if (left < -20) {
+                            new_left = -90;
+                            $(e.currentTarget).addClass('open');
+                        } else {
+                            new_left = 0;
+                        }
+                    }
+                    $(e.currentTarget).removeClass('dragstart');
+                    $(e.currentTarget).css('transform', 'translate3D(' + new_left + 'px,0px,0px)');
+                    $(e.currentTarget).attr("data-transx", new_left);
+                    $(e.currentTarget).addClass('animatedh');
+                    Drags.dragtag = false;
+                    enable_scroll()
+                });
+                function closeallswipe() {
+                    $('.pay-list .pay-each').css('transform', 'translate3D(0px,0px,0px)');
+                    $('.pay-list .pay-each').removeClass('open');
+                    $('.pay-list .pay-each').addClass('animatedh');
+                    $('.pay-list .pay-each').attr("data-transX", 0);
+                }
+            },
+
+
+
+            deleteProduct: function () {
+
+
+            },
+
+            // 删除方案，方案历史记录
+            deleteCollect: function (index) {
+                var collectList = cacheLocalstorage.getCache('collectList1120') || []
+                var collectListPlan = app.data.collectListPlan || {}
+                var collectCheck = cacheLocalstorage.getCache('collectCheck1120') || {}
+                mdui.dialog({
+                    cssClass: 'delete-confirm',
+                    title: '確定要刪除此商品?',
+                    content: '<img class="mdui-cart-product-sku-img" src="' + app.data.collectList[index].productImageUrl + '">'
+                    ,
+                    buttons: [{
+                        text: '確認',
+                        onClick: function (inst) {
+
+                            delete collectListPlan[collectList[index]]
+                            delete collectCheck[collectList[index]]
+                            collectList.splice(index, 1)
+                            cacheLocalstorage.setCache('collectList1120', collectList)
+                            cacheLocalstorage.setCache('collectListPlan1120', collectListPlan)
+                            cacheLocalstorage.setCache('collectCheck1120', collectCheck)
+                            app.methods.initProdutList()
+                            app.methods.initShoppingCart()
+                            inst.close();
+                        }
+                    },
+                    {
+                        text: '取消',
+                        onClick: function (inst) {
+                            inst.close();
+                        }
+                    }
+                    ]
+                });
+
+            }
+        }
+
+    };
+    $$(function () {
+        app.init();
+
+    });
+</script>
+
+</html>
